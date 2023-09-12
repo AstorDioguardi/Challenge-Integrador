@@ -3,111 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Funkoshop</title>
+    <title>Home | Funcoshop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header> <!-- Inicio Header -->
-        <nav>
+    <header class="header">
+        <!-- contenedor superior del header con nav y logo -->
+        <nav class="header__nav">
             <picture>
                 <a href="./index.html">
-                    <img src="./img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+                    <img src="img/branding/logo_light_horizontal.svg" alt="logo">
                 </a>
             </picture>
-            <ul>
-                <li>
+            <ul class="header__nav__ul">
+                <li class="header__nav__ul__li">
                     <a href="./pages/shop.html">SHOP</a>
                 </li>
-                <li>
-                    <a href="./pages/contacto.html">CONTACTO</a>
+                <li class="header__nav__ul__li">
+                    <a href="./pages/contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./pages/login.html">LOGIN</a>
+                <li class="header__nav__ul__li">
+                    <a href="./pages/loguin.html">LOGUIN</a>
                 </li>
-                <li>
+                <li class="header__nav__ul__li">
                     <a href="./pages/cart.html">
-                        <img src="./img/icons/cart-icon.svg" alt="Icono de carrito">
+                        <img src="img/icons/cart-icon.svg" alt="icono carrito">
                     </a>
-                </li>
+                </li><!--logo carrito-->
             </ul>
         </nav>
-    </header> <!-- Fin Header -->
-    <main> <!-- Inicio Main -->
+    </header>
+    <!-- inicia el main -->
+    <main class="main">
+        <!-- rimero el banner -->
         <section>
             <article>
+                <!-- <img src="img/funkos-banner.webp" alt="banner"> dejo comentado para usarla de fondo al agregar css -->
                 <h3>Nuevos Ingresos</h3>
-                <p>Descubrí el próximo Funko Pop de tu colección</p>
+                <p> Descubrí el próximo Funko Pop de tu colección</p>
                 <a href="./pages/shop.html">SHOP</a>
             </article>
+
         </section>
-        <section>
+        <!-- Inicia section Mandalorian "This is the Way" -->
+        <section >
             <article>
-                <h3>Star Wars & The Mandalorian</h3>
+                <h3>STAR WARS & THE MANDALORIAN</h3>
                 <p>Disfruta de una saga que sigue agregando personajes a su colección.</p>
-                <a href="">VER COLECCIÓN</a>
+                <hr/>
+                <a href="./pages/shop.html">Ver colección</a >
             </article>
             <picture>
-                <img src="./img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                <img src="img/star-wars/baby-yoda-1.webp" alt="funco Grogu">
             </picture>
-        </section>
-        <section>
+        </section>~
+        <!-- inicia section de pokemon, "En esta ruta no hay pistas para entrenadores."-->
+        <section >
             <article>
                 <h3>POKEMON INDIGO</h3>
-                <p>Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
-                <a href="">VER COLECCIÓN</a>
+                <p>Atrapa a todos los que puedas y disfruta de una colección llena de amigos.</p>
+                <hr/>
+                <a href="./pages/shop.html">Ver colección</a >
             </article>
             <picture>
-                <img src="./img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon">
+                <img src="img/pokemon/vulpix-1.webp" alt="funco Vulpix">
             </picture>
         </section>
-        <section>
+        <!-- inicia section Harry Potter "El ingenio sin medida es el mayor tesoro de un hombre."-->
+        <section >
             <article>
                 <h3>HARRY POTTER</h3>
                 <p>Revive los recuerdos de una saga llena de magia y encanto.</p>
-                <a href="">VER COLECCIÓN</a>
+                <hr/>
+                <a href="./pages/shop.html">Ver colección</a >
             </article>
             <picture>
-                <img src="./img/harry-potter/snape-patronus-1.webp" alt="Figura coleccionable Funko de Snape Patronus de la película Harry Potter">
+                <img src="img/harry-potter/snape-patronus-1.webp" alt="funco espectro patronus del Profesor Snape">
             </picture>
         </section>
+        <!-- inicia Section de ultimos LANZAMIENTOS -->
         <section>
             <ul>
                 <li>
                     <article>
-                        <picture>
-                            <img src="./img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de Stormtrooper de la película Star Wars">
-                        </picture>
-                        <div>
-                            <p>STAR WARS</p>
-                            <h4>STORMTROOPER LIGHTSABER</h4>
-                            <p>$ 1799,99</p>
-                            <p>3 CUOTAS SIN INTERÉS</p>
-                        </div>
+                        <a href="">
+                            <picture>
+                                <img src="img/star-wars/trooper-1.webp" alt="funco de STORMTROOPER sable de luz">
+                            </picture>
+                            <div>
+                                <p>STAR WARS</p>
+                                <h4>STORMTROOPER LIGHTSABER</h4>
+                                <p>$ 1799,99</p>
+                                <p>3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <picture>
-                            <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
-                        </picture>
-                        <div>
-                            <p>POKEMON</p>
-                            <h4>PIDGEOTTO</h4>
-                            <p>$ 1799,99</p>
-                            <p>3 CUOTAS SIN INTERÉS</p>
-                        </div>
+                        <a href="">
+                            <picture>
+                                <img src="img/pokemon/pidgeotto-1.webp" alt="funco de PIDGEOTTO">
+                            </picture>
+                            <div>
+                                <p>POKEMON</p>
+                                <h4>PIDGEOTTO</h4>
+                                <p>$ 1799,99</p>
+                                <p>3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <picture>
-                            <img src="./img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna de la película Harry Potter">
-                        </picture>
-                        <div>
-                            <p>HARRY POTTER</p>
-                            <h4>LUNA LOVEGOOD LION MASK</h4>
-                            <p>$ 1799,99</p>
-                            <p>3 CUOTAS SIN INTERÉS</p>
-                        </div>
+                        <a href="">
+                            <picture>
+                                <img src="img/harry-potter/luna-1.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+                            </picture>
+                            <div>
+                                <p>HARRY POTTER</p>
+                                <h4>LUNA LOVEGOOD LION MASK</h4>
+                                <p>$ 1799,99</p>
+                                <p>3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
                     </article>
                 </li>
             </ul>
@@ -138,4 +157,4 @@
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Fin Footer -->
 </body>
-</html><!--pequeño comentario de prueba-->
+</html>
