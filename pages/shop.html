@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <!-- contenedor superior del header con nav y logo -->
+        <div>
+            <nav class="header__nav">
+                <ul class="header__nav__ul">
+                    <li class="header__nav__ul__li"><a href="#">Shop</a></li>
+                    <li class="header__nav__ul__li"><a href="#">Contacto</a></li>
+                    <li class="header__nav__ul__li"><a href="#">Loguin</a></li>
+                    <li class="header__nav__ul__li"><a href="#"><img src="../img/icons/cart-icon.svg" alt="icono carrito"></a></li><!--logo carrito-->
+                </ul>
+                <img src="../img/branding/logo_light_horizontal.svg" alt="logo">
+            </nav>
+        </div>
+    </header>
+    <!-- inicia el main -->
+    <main>
+        <aside>
+            <form action="" method="" class="busqueda">
+                    <label for="buscar">BUSCAR</label>
+                    <input type="text" id="buscar" name="buscar">
+                    <label for="ordenar">ORDENAR POR</label>
+                    <select name="ordenar" id="ordenar">
+                        <option value="mayor a menor">Mayor a menor</option>
+                        <option value="menor a mayor">Menor a mayor</option>
+                        <option value="mas relevantes">Mas relevante</option>
+                    </select>
+                    <span>Precio</span>
+                    <!-- no se si acá debería ir un label, pero como son 2 casilleros y no se debe repetir id estoy confundido -->
+                    <label for="min">Min</label>
+                    <input type="number" id="min" name="min">
+                    <label for="max">Max</label>
+                    <input type="number" id="max" name="max">
+                    <span>Filtrar</span>
+                    <label for="nuevos">NUEVOS</label>
+                    <input type="checkbox" id="nuevos" name="nuevos">
+                    <label for="edicionEspecial">EDICIÓN ESPECIAL</label>
+                    <input type="checkbox" id="edicionEspecial" name="edicionEspecial">
+                    <label for="ofertas">OFERTAS</label>
+                    <input type="checkbox" id="ofertas" name="ofertas">
+                    <label for="favoritos">FAVORITOS</label>
+                    <input type="checkbox" id="favoritos" name="favoritos">
+            </form>
+        </aside>
+        <section>
+            <!-- las imagenes lleban un hover que tenemos que agregar cuando usemos css, para alternar entre imagenes -->
+            <!-- las imagenes lleban un hover que tenemos que agregar cuando usemos css, para alternar entre imagenes -->
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/star-wars/trooper-1.webp" alt="funco de STORMTROOPER sable de luz">
+                <img src="../img/star-wars/trooper-box.webp" alt="funco de STORMTROOPER sable de luz">
+
+                <span>STAR WARS</span>
+                <h6>STORMTROOPER LIGHTSABER</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/pokemon/pidgeotto-1.webp" alt="funco de PIDGEOTTO">
+                <img src="../img/pokemon/pidgeotto-box.webp" alt="funco de PIDGEOTTO">
+
+                <span>POKEMON</span>
+                <h6>PIDGEOTTO</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/harry-potter/luna-1.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+                <img src="../img/harry-potter/luna-box.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+
+                <span></span>
+                <h6>LUNA LOVEGOOD LION MASK</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <!-- las imagenes lleban un hover que tenemos que agregar cuando usemos css, para alternar entre imagenes -->
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/star-wars/trooper-1.webp" alt="funco de STORMTROOPER sable de luz">
+                <img src="../img/star-wars/trooper-box.webp" alt="funco de STORMTROOPER sable de luz">
+
+                <span>STAR WARS</span>
+                <h6>STORMTROOPER LIGHTSABER</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/pokemon/pidgeotto-1.webp" alt="funco de PIDGEOTTO">
+                <img src="../img/pokemon/pidgeotto-box.webp" alt="funco de PIDGEOTTO">
+
+                <span>POKEMON</span>
+                <h6>PIDGEOTTO</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/harry-potter/luna-1.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+                <img src="../img/harry-potter/luna-box.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+
+                <span></span>
+                <h6>LUNA LOVEGOOD LION MASK</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <!-- las imagenes lleban un hover que tenemos que agregar cuando usemos css, para alternar entre imagenes -->
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/star-wars/trooper-1.webp" alt="funco de STORMTROOPER sable de luz">
+                <img src="../img/star-wars/trooper-box.webp" alt="funco de STORMTROOPER sable de luz">
+
+                <span>STAR WARS</span>
+                <h6>STORMTROOPER LIGHTSABER</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/pokemon/pidgeotto-1.webp" alt="funco de PIDGEOTTO">
+                <img src="../img/pokemon/pidgeotto-box.webp" alt="funco de PIDGEOTTO">
+
+                <span>POKEMON</span>
+                <h6>PIDGEOTTO</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+            <div>
+                <span>NUEVO</span><!-- con css agregar fondo rojo padding a los lados-->
+                <img src="../img/harry-potter/luna-1.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+                <img src="../img/harry-potter/luna-box.webp" alt="Funco de LUNA LOVEGOOD con mascara de león">
+
+                <span></span>
+                <h6>LUNA LOVEGOOD LION MASK</h6>
+                <span>$ 1799,99</span>
+                <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+        </section>
+        <section class="navPages">
+            <ul>
+                <li><a href="*"><i class="fa-solid fa-chevron-left"></i></a></li>
+                <li><a href="*">1</a></li>
+                <li><a href="*">2</a></li>
+                <li><a href="*">...</a></li>
+                <li><a href="*">9</a></li>
+                <li><a href="*">10</a></li>
+                <li><a href="*"><i class="fa-solid fa-angle-right"></i></a></li>
+            </ul>
+        </section>
+    </main>
+    <!-- inicia el footer -->
+    <footer class="footer">
+        <h6 class="footer__derechos">All rights reserved 2023 - Funkoshop &copy;</h6>
+        <img src="../img/branding/isotype.svg" alt="Logo" class="footer__logo">
+        <nav class="footer__nav">
+            <ul class="footer__nav__ul">
+                <li><a href="">SHOP</a></li>
+                <li><a href="">INGRESAR</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
