@@ -139,6 +139,7 @@ header {
     width: 300px;
     position: absolute;
     background-color: var(--dark-bg-solid);
+    z-index: 3;
 }
 
 .submenu__link {
@@ -190,6 +191,10 @@ header {
     color: var(--light-font-solid);
 }
 
+.hero__text {
+    color: var(--light-font-solid);
+}
+
 .hero__link {
     display: inline-block;
     font-size: var(--font-medium);
@@ -210,6 +215,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    padding: var(--spacing-16) 0;
 }
 
 .collection:nth-child(2) .collection__cover {
@@ -251,5 +257,94 @@ header {
 
     &:hover{
         background-color: var(--primary-900);
+    }
+}
+
+/* SLIDER */
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+    margin: var(--spacing-68) auto;
+}
+
+.slider__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    text-transform: uppercase;
+}
+
+.slider__items {
+    display: flex;
+    gap: var(--spacing-24);
+}
+
+.card-item__cover {
+    display: flex;
+    position: relative;
+
+    &:hover .card-item__img--back {
+        display: block;
+    }
+
+    &:hover .card-item__img--front {
+        display: none;
+    }
+}
+
+.card-item__tag {
+    font-size: var(--font-xsmall);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    padding: var(--spacing-8) var(--spacing-12);
+    position: absolute;
+    right: 0;
+}
+
+.card-item__img--back{
+    display: none;
+}
+
+.card-item__cover img {
+    animation: fade .7s;
+}
+
+.card-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+    padding: var(--spacing-16);
+}
+
+.card-item__licence {
+    font-size: var(--font-xsmall);
+    font-weight: 500;
+}
+
+.card-item__name {
+    font-size: var(--font-medium);
+    font-weight: 700;
+}
+
+.card-item__price {
+    font-size: var(--font-small);
+    font-weight: 400;
+}
+
+.card-item__promo {
+    font-size: var(--font-xsmall);
+    font-weight: 700;
+    color: var(--secondary-solid);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
