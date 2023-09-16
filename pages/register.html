@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Register | Funkoshop</title>
 </head>
-
 <body>
-    <header> <!-- Inicio Header -->
+    <header>    <!-- Header start -->
         <nav>
             <picture>
-                <a href="./index.html">
-                    <img src="./img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+                <a href="../index.html">
+                    <img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
                 </a>
             </picture>
             <ul>
                 <li>
-                    <a href="./pages/shop.html">SHOP</a>
+                    <a href="./shop.html">SHOP</a>
                 </li>
                 <li>
-                    <a href="./pages/contacto.html">CONTACTO</a>
+                    <a href="./contacto.html">CONTACTO</a>
                 </li>
                 <li>
-                    <a href="./pages/login.html">LOGIN</a>
+                    <a href="./login.html">LOGIN</a>
                 </li>
                 <li>
-                    <a href="./pages/cart.html">
-                        <img src="./img/icons/cart-icon.svg" alt="Icono de carrito">
+                    <a href="./cart.html">
+                        <img src="../assets/img/icons/cart-icon.svg" alt="Icono de carrito">
                     </a>
                 </li>
             </ul>
         </nav>
-    </header> <!-- Fin Header -->
-    <main> <!-- Inicio Main -->
+    </header>   <!-- Header end -->
+    <main>  <!-- Main start -->
         <section>
             <h3>CREA TU CUENTA</h3>
             <p>Completa el formulario para ser parte del mundo de los Funkos</p>
             <div>
-                <form action="">
+                <form>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="John">
+                    <input type="text" name="nombre" id="nombre" placeholder="John" required>
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Doe">
+                    <input type="text" name="apellido" id="apellido" placeholder="Doe" required>
                     <label for="mail">Email:</label>
-                    <input type="mail" name="apellido" id="mail" placeholder="johndoe@correo.com">
+                    <input type="email" name="email" id="email" placeholder="johndoe@correo.com" required>
                     <label for="">Contraseña:</label>
-                    <input type="password" name="contraseña" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;">
+                    <input type="password" name="contraseña" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
                     <label for="">Repetir Contraseña:</label>
-                    <input type="password" name="repetir_password" id="repetir_password"
-                        placeholder="&#9679;&#9679;&#9679;&#9679;">
+                    <input type="password" name="repetir_password" id="repetir_password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
                     <input type="submit" value="Registrar">
-                    <input type="checkbox" value="terminos">
-                    <label for="terminos">Acepto Términos y Condiciones</label>
+                    <input type="checkbox" value="terminos" required>
+                    <label for="terminos">Acepto <a href="">Términos y Condiciones</a></label>
                 </form>
             </div>
         </section>
-    </main> <!-- Fin Main -->
-    <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="./pages/shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="./pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="./pages/login.html">INGRESAR</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture>
-                    <img src="./img/branding/isotype.svg" alt="Isotipo Funko Pop">
-                </picture>
-            </nav>
-        </section>
+    </main> <!-- Main end -->
+    <footer>    <!-- Footer start -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="./shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a href="./register.html">REGISTRARSE</a>
+                </li>
+                <li>
+                    <a href="./login.html">INGRESAR</a>
+                </li>
+                <li>
+                    <a href="./contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../assets/img/branding/isotype.svg" alt="Isotipo Funko Pop">
+            </picture>
+        </nav>
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer>
+    </footer>   <!-- Footer end -->
 </body>
-</html><!--pequeño comentario de prueba-->
+</html>
