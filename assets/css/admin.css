@@ -166,6 +166,7 @@ header {
     gap: var(--spacing-36);
     font-size: var(--font-large);
     font-weight: 700;
+    padding-right: 13.5rem;
 }
 
 .listTitle__button {
@@ -173,6 +174,7 @@ header {
     border: 0px;
     border-radius: 6px;
     background-color: var(--primary-solid);
+    cursor: pointer;
 
     &>img {
         filter: invert(1);
@@ -180,12 +182,54 @@ header {
 }
 
 /* TABLE */
+table {
+    width: 1093.77px;
+    height: 844.45px;
+    padding: var(--spacing-24);
+}
 
+th {
+    font-size: var(--font-large);
+    font-weight: 700;
+    text-align: left;
+
+    &:first-child {
+        text-align: center;
+    }
+}
+
+tr>td:last-child{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: var(--spacing-12);
+}
+
+td {
+    font-size: var(--font-large);
+    font-weight: 500;
+    padding: var(--spacing-8) 0;
+    
+    &:nth-child(1) {
+        text-align: center;
+        padding: 0 var(--spacing-12);
+    }
+
+    &>button {
+        background-color: transparent;
+        border: none;
+        width: 34px;
+        cursor: pointer;
+    }
+}
 
 /* FOOTER */
 .footer {
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-68);
+}
+
+.navbar__item--li {
+    padding: var(--spacing-8) var(--spacing-16);
 }
 
 .footer__copy {
