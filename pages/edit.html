@@ -33,6 +33,7 @@
                     <div class="combobox">
                         <label class="label-edit-item"for="categoria-item">Categoria</label>
                         <select id="categoria-item">
+                            <option disabled selected value="">Selecionar</option>
                             <option value="Figura">Figura</option>
                         </select>
                     </div>
@@ -40,6 +41,7 @@
                     <div class="combobox">
                         <label class="label-edit-item" for="licencia-item">Licencia</label>
                         <select id="licencia-item">
+                            <option disabled selected value="">Selecionar</option>
                             <option value="Licencia">Naruto Shipuden</option>
                         </select>
                     </div>
@@ -49,11 +51,11 @@
                         <label for="nombre-item">Nombre del producto: </label>
                         <input type="text" id="nombre-item">
                 </div>
-                <textarea class="descripcion-item" id="descripcion-item" rows="5" cols="100">
+                <textarea class="descripcion-item" id="descripcion-item" rows="5" cols="100" placeholder="Descripcion del producto...">
                 </textarea>                   
                 <div class="ingresar-texto-corto">
                     <label for="sku-item">SKU: </label>
-                    <input type="text" id="sku-item">
+                    <input type="text" id="sku-item" >
                 </div>               
                 <div class="ingresar-texto-corto">
                     <label for="precio-item">Precio: </label>
@@ -70,6 +72,7 @@
                 <div class="combobox">
                     <label class="label-edit-item" for="licencia-item">Cuotas: </label>
                     <select id="cuotas-item">
+                        <option disabled selected value="">Selecionar</option>
                         <option value="una">1 Cuota sin interés</option>
                         <option value="tres">3 Cuotas sin interés</option>
                         <option value="seis">6 Cuotas sin interés</option>
@@ -77,7 +80,7 @@
                 </div> 
                     <label for="archivo">Imágenes: </label>
                     <input type="file" id="archivo" name="archivo">
-                <section> <!--Imagenes frente y dorso-->
+                <section id="imagenes-de-muestra"> <!--Imagenes frente y dorso-->
                     <div class="imagenes-edit-item">
                     <div class="imagen-edit-item">
                         <img src="../assets/img/star-wars/baby-yoda-1.webp" alt="funko pop baby yoda"> <!--IMAGEN PROVISORIA PORQUE NO ESTÁ LA DEL FIGMA-->
