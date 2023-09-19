@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <!-- contenedor superior del header con nav y logo -->
+        <div>
+            <nav class="header__nav">
+                <ul class="header__nav__ul">
+                    <li class="header__nav__ul__li"><a href="#">Shop</a></li>
+                    <li class="header__nav__ul__li"><a href="#">Contacto</a></li>
+                    <li class="header__nav__ul__li"><a href="#">Loguin</a></li>
+                    <li class="header__nav__ul__li"><a href="#"><img src="../img/icons/cart-icon.svg" alt="icono carrito"></a></li><!--logo carrito-->
+                </ul>
+                <img src="../img/branding/logo_light_horizontal.svg" alt="logo">
+            </nav>
+        </div>
+    </header>
+    <!-- inicia el main -->
+    <main>
+        <section class="art">
+            <div>
+                <h1>Carrito de Compras</h1>
+                <hr>
+                <div>
+                    <span>Detalle del producto</span>
+                    <span>Cantidad</span>
+                    <span>Total</span>
+                </div>
+            </div>
+            <div>
+                <!-- el html que agregue los productos va a tener que agregarse de forma dinamica por lo que dsps hay que modificarlo -->
+                <div><!--agrupo en div para que sea mas fácil organizarlos despues en grid o flex-->
+                    <img src="../img/star-wars/baby-yoda-1.webp" alt="Funco Grogu baby Yoda">
+                    <h3>BABY YODA BLUEBALL</h3>
+                    <h6>STAR WARS</h6>
+                    <span>precio: $ 1799,99</span>
+                </div>
+                <form action="">
+                    <input type="number" placeholder="2">
+                </form>
+                <span id="unidades">$ 3599,98</span><!--este span necesita modificarse a medida que aumente en number, dejo un id para hacerlo en Js-->
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+            <div>
+                <div>
+                    <img src="../img/pokemon/pidgeotto-1.webp" alt="funco PIDGEOTTO">
+                    <h3>PIDGEOTTO</h3>
+                    <h6>POKEMON</h6>
+                    <span>precio: $ 1799,99</span>
+                </div>
+                <form action="">
+                    <input type="number" placeholder="1">
+                </form>
+                <span id="unidades">$ 1799,99</span><!--este span necesita modificarse a medida que aumente en number, dejo un id para hacerlo en Js-->
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+        </section>
+        <section class="resumen">
+            <h2>RESUMEN</h2>
+            <hr>
+            <!-- versión para grid
+            <div>
+                <span>Cantidad de elementos</span>
+                <span>3</span>
+                <span>Subtotal</span>
+                <span>$ 5.399,97</span>
+                <span>Envio</span>
+                <span>$ 0,00</span>
+                <hr>
+                <span><strong>TOTAL</strong></span>
+                <span>$ 5.399,97</span>
+            </div>
+            <button>IR A PAGAR</button> -->
+            <table border="1px solid">
+                <tr>
+                    <td>Cantidad de elementos</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$ 5.399,97</td>
+                </tr>
+                <tr>
+                    <td>Envio</td>
+                    <td>$ 0,00</td>
+                </tr>
+            </table>
+            <hr>
+            <table>
+                <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td>$ 5.399,97</td>
+                </tr>
+            </table>
+            <button>IR A PAGAR</button>
+        </section>
+    </main>
+    <!-- inicia el footer -->
+    <footer class="footer">
+        <h6 class="footer__derechos">All rights reserved 2023 - Funkoshop &copy;</h6>
+        <img src="../img/branding/isotype.svg" alt="Logo" class="footer__logo">
+        <nav class="footer__nav">
+            <ul class="footer__nav__ul">
+                <li><a href="">SHOP</a></li>
+                <li><a href="">INGRESAR</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
