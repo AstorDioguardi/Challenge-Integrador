@@ -45,10 +45,10 @@
     </header>   <!-- Header end -->
     <main >
         <div class="main container">
-            <aside class="aside container">
+            <aside class="aside container"> <!--ASIDE-->
                 <form action="" method="" class="aside__form">
                         <label for="buscar">BUSCAR</label>
-                        <input type="text" id="buscar" name="buscar">
+                        <input type="text" id="buscar" name="buscar" placeholder="item o categoria">
                         <label for="ordenar">ORDENAR POR</label>
                         <select name="ordenar" id="ordenar">
                             <option value="mayor a menor">Mayor a menor</option>
@@ -58,31 +58,34 @@
                         <label for="min">Precio</label>
                         <div>
                             <label for="min">Min</label>
-                            <input type="number" id="min" name="min">
+                            <input type="number" id="min" name="min" placeholder=" 0">
+                            <span>-</span>
                             <label for="max">Max</label>
-                            <input type="number" id="max" name="max">
+                            <input type="number" id="max" name="max" placeholder=" 0">
                         </div>
-                        <span>Filtrar</span>
-                        <div>
-                            <input type="checkbox" id="nuevos" name="nuevos" class="checkbox">
-                            <label for="nuevos">NUEVOS</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="edicionEspecial" name="edicionEspecial" class="checkbox">
-                            <label for="edicionEspecial">EDICIÓN ESPECIAL</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="edicionEspecial" name="edicionEspecial" class="checkbox">
-                            <label for="edicionEspecial">EDICIÓN ESPECIAL</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="ofertas" name="ofertas" class="checkbox">
-                            <label for="ofertas">OFERTAS</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="favoritos" name="favoritos" class="checkbox">
-                            <label for="favoritos">FAVORITOS</label>
-                        </div>
+                        <h3>Filtrar</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="nuevos" name="nuevos" class="aside__ul--checkbox checkbox__nuevos">
+                                <label for="nuevos" class="checkbox__i--nuevos checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="nuevos" class="labelText">NUEVOS</label>     
+                            </li>
+                            <li>
+                                <input type="checkbox" id="edicionEspecial" name="edicionEspecial" class="aside__ul--checkbox checkbox__edEsp">
+                                <label for="edicionEspecial" class="checkbox__i--edEsp checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="edicionEspecial" class="labelText">EDICIÓN ESPECIAL</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ofertas" name="ofertas" class="aside__ul--checkbox checkbox__ofertas">
+                                <label for="ofertas" class="checkbox__i--ofertas checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="ofertas" class="labelText">OFERTAS</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="favoritos" name="favoritos" class="aside__ul--checkbox checkbox__favoritos">
+                                <label for="favoritos" class="checkbox__i--favoritos checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="favoritos" class="labelText">FAVORITOS</label>
+                            </li>
+                        </ul>
                 </form>
             </aside>
             <section class="galery container">   <!-- galery content-->
@@ -242,7 +245,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="navbarPages container"><!-- paginas nuevas -->
+            <!-- <section class="navbarPages container">
                 <ul>
                     <li><a href="*"><i class="fa-solid fa-chevron-left"></i></a></li>
                     <li><a href="*">1</a></li>
@@ -252,9 +255,8 @@
                     <li><a href="*">10</a></li>
                     <li><a href="*"><i class="fa-solid fa-angle-right"></i></a></li>
                 </ul>
-            </section>
+            </section> -->
         </div>
-        
     </main>
     <footer class="footer"> <!-- Footer start -->
         <nav class="navbar container">
@@ -279,5 +281,6 @@
         <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Footer end -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://kit.fontawesome.com/891dc1301c.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -165,7 +165,10 @@ header {
 
 .aside {
     grid-area: aside;
-    padding: var(--spacing-24);
+    padding: var(--spacing-24) var(--spacing-12);
+    width: 24rem;
+    height: 60rem;
+
 }
 
 .aside__form {
@@ -176,33 +179,148 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: var(--spacing-8);
+    gap: var(--spacing-16);
+    width: 100%;
+    height: 100%;
+    font-family: var(--base-font);
 }
 
-.aside__form div {
+.aside__form>input {
+    /*silousoparatodoslosdecendientesserompeeldiseñodel<ul>*/
+    border: 2px var(--dark-solid) solid;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height: var(--spacing-36);
+    font-size: var(--font-medium);
+
+}
+
+.aside__form input::placeholder {
+    font-size: 1.8rem;
+    color: var(--dark-500);
+    font-family: var(--base-font);
+}
+
+.aside__form>select {
+    border: 2px var(--dark-solid) solid;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height: var(--spacing-36);
+}
+
+.aside__form>label {
+    font-weight: 500;
+    color: var(--dark-solid);
+    font-size: var(--font-large);
+}
+
+.aside__form>div {
     display: flex;
     height: var(--spacing-24);
     width: 100%;
     flex-wrap: nowrap;
     flex-direction: row;
-    padding: 0var(--spacing-16);
     gap: var(--spacing-8);
 } 
 
-.aside__form div label {
+.aside__form>div label {
     flex-shrink: 2;
     flex-grow: 2;
+    font-size: var(--font-medium);
+    font-weight: 500;
+    color: var(--dark-solid);
 }
 
-.aside__form div input {
+.aside__form>div input {
     flex-shrink: 1;
     flex-grow: 2;
-    width: var(--spacing-24);
+    width: var(--spacing-36);
+    /*sinocolocoeltamañoprovocaqueelcontenedorocupemasdelespaciodesignado*/height: var(--spacing-24);
+    border: 2px var(--dark-solid) solid;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
-.checkbox {
-    justify-self: center;
+.aside__form>div span {
+    margin: var(--spacing-8);
     align-self: center;
+    justify-self: center;
+    font-weight: 500;
+    color: var(--dark-solid);
+    font-size: var(--font-large);
+}
+
+.aside__form>h3 {
+    font-weight: 500;
+    color: var(--dark-solid);
+    font-size: var(--font-large);
+}
+
+.aside__form>ul {
+    margin-left: var(--spacing-16);
+}
+
+.aside__form>ul>li { /*solo es para que los position absolute lo tomen como punto de inicio*/
+    position: relative;
+}
+
+.aside__form>ul>li>.labelText {
+    font-size: var(--font-small);
+    font-weight: 500;
+}
+
+.aside__ul--checkbox {
+    /*quitolaaparienciapordefectoyleaplicounanueva*/appearance: none;
+    cursor: pointer;
+    border: 2px var(--dark-solid) solid;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height: var(--spacing-16);
+    width: var(--spacing-16);
+}
+
+.aside__ul--checkbox:checked {
+    background-color: var(--dark-solid); /*cuestionable desición estetica parte 1*/
+}
+
+
+.fa-check { /*uso la clase que ya tiene el icono*/
+    position: absolute; /*Como se perdieron las tildes del checkbox, agregue una nueva y con position absolute las ubico*/
+    left: 3px;
+    bottom: 1px;
+    font-size:var(--font-medium);
+}
+
+.checkbox__i {
+    opacity: 0; /*La tilde queda invisible, uso una clase generica oara el primer estado*/
+}
+
+.checkbox__nuevos:checked ~ .checkbox__i--nuevos { /*uso clases individuales para actualizar su visuslización por separado*/
+    opacity: 1;;
+}
+
+.checkbox__edEsp:checked ~ .checkbox__i--edEsp { /*cabe mencionar que meti las tildes en label para que el checkbox funcione con ellas encima*/
+    opacity: 1;;
+}
+
+.checkbox__ofertas:checked ~ .checkbox__i--ofertas { /*por eso las clases ahora estan en el label, para afectarlas desde el estado checked con ~*/
+    opacity: 1;;
+}
+
+.checkbox__favoritos:checked ~ .checkbox__i--favoritos {
+    opacity: 1;;
 }
 
 /* galery */
