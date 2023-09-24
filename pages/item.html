@@ -44,21 +44,23 @@
             </ul>
         </nav>    
     </header> <!-- Header end -->
-    <main> <!-- Main start -->
-        <section>
-            <picture>
+    <main class="main-container"> <!-- Main start -->
+        <section class="card-item container">
+            <picture class="card-item__cover">
                 <img src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
             </picture>
-            <article>
-                <p>STAR WARS</p>
-                <h3>BABY YODA BLUEBALL</h3>
-                <p>Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
-                <span>$ 1799,99</span>
-                <form action="">
-                    <input type="number" placeholder="0">
+            <article class="card-item__content">
+                <p class="card-item__licence">STAR WARS</p>
+                <h3 class="card-item__name">BABY YODA BLUEBALL</h3>
+                <p class="card-item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+                <span class="card-item__price">$ 1799,99</span>
+                <form class="card-item__add-subtract-items" action="">
+                    <input class="card-item__number-items" type="number" placeholder="0">
+                    <button type="button">+</button>
+                    <button type="button">-</button>
                     <button type="submit"><a href="./cart.html">Agregar al Carrito</a></button>
                 </form>
-                <p><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+                <p class="card-item__promo"><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
             </article>
         </section>
         <section>

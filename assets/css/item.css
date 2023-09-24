@@ -152,3 +152,50 @@ header {
         background-color: var(--primary-900);
     }
 }
+
+/* CARD-ITEM */
+.card-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: var(--spacing-16) 0;
+}
+
+.card-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    align-items: start;
+}
+
+.card-item__licence {
+    font-size: var(--font-small);
+    font-weight: 500;
+}
+
+.card-item__name {
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+}
+
+.card-item__description {
+    font-size: var(--font-large);
+    font-weight: 400;
+}
+.card-item__price {
+    font-size: var(--font-jumbo);
+    font-weight: 400;
+}
+.card-item__add-sub-items {
+    display: grid;
+}
+
+
+
+.card-item__number-items {
+    width: 105.47px;
+    height: 35.24px;
+    
+    
+}
+
