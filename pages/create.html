@@ -1,95 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Editar item</title>
-  <link rel="stylesheet" href="../assets/css/create.css">
-</head>
-<body>
-  <section>
-    <header>  <!--INICIO HEADER-->
-      <nav>
-        <a href="../index.html">
-          <img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de Funkoshop"/>
-        </a>
-        <ul class="menu-nav-header">
-          <li>
-            <a href="./shop.html">VER TIENDA</a>
-          </li>
-          <li>
-            <a href="./admin.html">ADMIN</a>
-          </li>
-          <li>
-            <a href="">SALIR</a>
-          </li>
-        </ul>
-      </nav>
-    </header> <!--FIN HEADER-->
-  </section>
-  <main>  <!--INICIO MAIN-->
-    <section>
-      <div class="edit-item-container">
-        <!--DIV PRINCIPAL-->
-        <h2 class="titulo-abm-item">CREAR NUEVO ITEM</h2>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-          <div class="categoria-licencia-edit-container">
-            <!--CATEGORIA Y LICENCIA-->
-            <div class="combobox">
-              <label class="label-edit-item" for="categoria-item">Categoría</label>
-              <select id="categoria-item">
-                <option disabled selected value="">Selecionar</option>
-                <option value="Figura">Figura</option>
-              </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create | Funkoshop</title>
+    <link rel="shortcut icon" href="../assets/img/branding/isotype.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets/css/create.css" />
+  </head>
+  <body>
+      <header> <!--INICIO HEADER-->       
+        <nav>
+          <a href="../index.html"><img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de Funkoshop"/></a>
+          <ul class="menu-nav-header">
+            <li>
+              <a href="./shop.html">VER TIENDA</a>
+            </li>
+            <li>
+              <a href="./admin.html">ADMIN</a>
+            </li>
+            <li>
+              <a href="../index.html">SALIR</a>
+            </li>
+          </ul>
+        </nav>
+      </header><!--FIN HEADER-->      
+    <main><!--INICIO MAIN-->
+      <section>
+        <div class="edit-item-container"><!--DIV PRINCIPAL-->
+          <h2 class="titulo-abm-item">CREAR NUEVO ITEM</h2>
+          <form class="form" id="formulario-create" action="" method="post" enctype="multipart/form-data">
+            <div class="categoria-licencia-edit-container"><!--CATEGORIA Y LICENCIA-->              
+              <div class="combobox">
+                <label class="label-edit-item" for="categoria-item"
+                  >Categoría</label
+                >
+                <select id="categoria-item">
+                  <option disabled selected value="">Selecionar</option>
+                  <option value="Figura">Figura</option>
+                </select>
+              </div>
+              <div class="combobox">
+                <label class="label-edit-item" for="licencia-item"
+                  >Licencia</label
+                >
+                <select id="licencia-item">
+                  <option disabled selected value="">Selecionar</option>
+                  <option value="Licencia">Naruto Shipuden</option>
+                </select>
+              </div>
+            </div><!--FIN CATEGORIA Y LICENCIA-->
+          <div class="bloque-uno-create"><!--inicio primer bloque-->              
+            <div class="ingresar-texto-corto">
+              <label for="nombre-item">Nombre del producto: </label>
+              <input type="text" id="nombre-item" />
             </div>
-            <div class="combobox">
-              <label class="label-edit-item" for="licencia-item">Licencia</label>
-              <select id="licencia-item">
-                <option disabled selected value="">Selecionar</option>
-                <option value="Licencia">Naruto Shipuden</option>
-              </select>
+            <textarea
+              class="descripcion-item" id="descripcion-item" placeholder="Descripcion del producto"></textarea>            
+              <div class="ingresar-texto-corto">
+                <label for="sku-item">SKU: </label>
+                <input type="text" id="sku-item" />
+              </div>
+              <div class="ingresar-texto-corto">
+                <label for="precio-item">Precio: </label>
+                <input type="text" id="precio-item" />
+              </div>
+              <div class="ingresar-texto-corto">
+                <label for="stock-item">Stock: </label>
+                <input type="text" id="stock-item" />
+              </div>
+          </div><!--Fin primer bloque-->            
+            <div class="bloque-dos-create"><!--inicio segundo bloque-->
+              <div class="ingresar-texto-corto">
+                <label for="descuento-item">Descuento: </label>
+                <input type="text" id="descuento-item"/>
+              </div>
+              <div class="combobox">
+                <label class="label-edit-item" for="licencia-item">Cuotas:</label>
+                <select id="cuotas-item">
+                  <option disabled selected value="">Selecionar</option>
+                  <option value="una">1 Cuota sin interés</option>
+                  <option value="tres">3 Cuotas sin interés</option>
+                  <option value="seis">6 Cuotas sin interés</option>
+                </select>
+              </div>
+            </div><!--fin segundo bloque-->
+            <div class="bloque-imagenes-create">
+              <label for="fileInput">Imágenes:</label>
+              <input type="file" id="fileInput" style="display: none" accept="image/*"multiple/>
+              <button id="chooseFileButton">Elegir Archivos</button>
+              <p id="noFilesText">No se ha seleccionado ningún archivo.</p>
             </div>
-          </div>  <!--FIN CATEGORIA Y LICENCIA-->
-          <div class="ingresar-texto-corto">
-            <label for="nombre-item">Nombre del producto: </label>
-            <input type="text" id="nombre-item"/>
-          </div>
-          <textarea class="descripcion-item" id="descripcion-item" rows="5" cols="100" placeholder="Descripcion del producto...">
-          </textarea>
-          <div class="ingresar-texto-corto">
-            <label for="sku-item">SKU: </label>
-            <input type="text" id="sku-item"/>
-          </div>
-          <div class="ingresar-texto-corto">
-            <label for="precio-item">Precio: </label>
-            <input type="text" id="precio-item"/>
-          </div>
-          <div class="ingresar-texto-corto">
-            <label for="stock-item">Stock: </label>
-            <input type="text" id="stock-item"/>
-          </div>
-          <div class="ingresar-texto-corto">
-            <label for="descuento-item">Descuento: </label>
-            <input type="text" id="descuento-item"/>
-          </div>
-          <div class="combobox">
-            <label class="label-edit-item" for="licencia-item">Cuotas: </label>
-            <select id="cuotas-item">
-              <option disabled selected value="">Selecionar</option>
-              <option value="una">1 Cuota sin interés</option>
-              <option value="tres">3 Cuotas sin interés</option>
-              <option value="seis">6 Cuotas sin interés</option>
-            </select>
-          </div>
-          <label for="archivo">Imágenes: </label>
-          <input type="file" id="archivo" name="archivo" />
-          <button class="btn-principal">Modificar Producto</button>
-        </form>
-      </div>  <!--FIN DIV PRINCIPAL-->
-    </section>
-  </main>   <!--FIN MAIN-->
-  <section>
-    <footer>  <!-- Footer start -->
+            <div id="imagePreviews"></div>
+            <button class="btn-principal" id="btn-agregar">Agregar Producto</button>
+            <button class="btn-principal" id="btn-limpiar">Limpiar</button>
+          </form>
+        </div>
+        <!--FIN DIV PRINCIPAL-->
+      </section>
+    </main> <!--FIN MAIN-->   
+    <footer><!-- Footer start -->      
       <nav>
         <ul>
           <li>
@@ -106,11 +115,11 @@
           </li>
         </ul>
         <picture>
-          <img src="../assets/img/branding/isotype.svg" alt="Isotipo Funko Pop"/>
+          <img src="../assets/img/branding/isotype.svg"alt="Isotipo Funko Pop"/>
         </picture>
       </nav>
       <p>All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer> <!-- Footer end -->
-  </section>
-</body>
+    </footer><!-- Footer end -->    
+    <script src="../assets/js/create.js"></script>
+  </body>
 </html>
