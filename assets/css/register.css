@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Palette */
+    --primary-solid: #FF3333;
+    --primary-900: rgba(255, 51, 51, .9);
+    --primary-500: rgba(255, 51, 51, .5);
+    --primary-300: rgba(255, 51, 51, .3);
+
+    --secondary-solid: #1D84B5;
+    --secondary-900: rgba(29, 132, 181, .9);
+    --secondary-500: rgba(29, 132, 181, .5);
+    --secondary-300: rgba(29, 132, 181, .5);
+
+    --dark-solid: #1F1F1F;
+    --dark-900: rgba(31, 31, 31, .9);
+    --dark-500: rgba(31, 31, 31, .5);
+    --dark-300: rgba(31, 31, 31, .3);
+
+    --dark-bg-solid: #30343F;
+    --light-bg-solid: #FAFAFF;
+    --light-font-solid: #FFFFFF;
+
+    /* Typography */
+    --base-font: 'Inter', sans-serif;
+    --alternative-font: 'Raleway', sans-serif;
+
+    /* Font-sizes */
+    --font-display: 4.6em;
+    --font-jumbo: 3.8em;
+    --font-xlarge: 3em;
+    --font-large: 2.4em;
+    --font-medium: 1.8em;
+    --font-small: 1.6em;
+    --font-xsmall: 1.4em;
+
+    /* Spacings */
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--base-font);
+    color: var(--dark-solid);
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+header,
+footer {
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.8em;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    max-width: 300px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link {
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    transition: background .3s ease-in-out;
+
+    &:hover {
+        background-color: var(--primary-900);
+    }
+}
+
+/* REGISTER */
+
+.register {
+    margin: var(--spacing-36) auto;
+}
+
+.register__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.register__text {
+    font-family: var(--alternative-font);
+    font-size: var(--font-xlarge);
+    font-weight: 500;
+    margin: var(--spacing-36) auto;
+    text-align: center;
+}
+
+.register__form {
+    max-width: 500px;
+    margin: auto;    
+    display: grid;
+    gap: var(--spacing-36);
+}
+
+.register__form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+}
+
+.register__form-label {
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    font-weight: 400;  
+}
+
+.register__form-input {
+    font-family: var(--base-font);
+    letter-spacing: 0.64px;
+    border-style: none;
+    outline: none;
+    border-bottom: 2px solid var(--primary-solid);
+}
+
+.register__form-submit {
+  display: flex;
+  justify-content: space-between;
+  max-width: 420px; 
+  align-items: center;
+}
+
+.register__form-terminos {
+    font-family: var(--base-font);
+    font-size: var(--font-medium);
+    font-weight: 400;
+}
+
+.register__form-button {
+    width: 103px;
+    height: 40px;
+    font-size: var(--font-xsmall);
+    font-weight: 400;
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    border-style: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.register__form-button:hover {
+    background-color: var(--primary-900);
+}
+
+.register__form-link {
+    color: var(--secondary-solid);
+    transition: all .3s ease-in-out;
+}
+
+.register__form-link:hover {
+    color: var(--secondary-900);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.navbar__item--li {
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+.footer__copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
+}
