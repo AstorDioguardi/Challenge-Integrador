@@ -210,7 +210,7 @@ input
 
 .navbar-menu-footer{
     display: block;
-    align-items: center;
+    align-items: center; 
     gap: var(--spacing-20);
 }
 
