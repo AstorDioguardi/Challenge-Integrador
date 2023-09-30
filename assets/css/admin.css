@@ -132,6 +132,7 @@ header {
 
 .finder__input {
     width: 530px;
+    height: 44.28px;
     border: 2px solid var(--dark-bg-solid);
     border-radius: 6px;
 }
@@ -256,6 +257,55 @@ td {
 }
 
 @media screen and (max-width: 768px) {
+    /* Burger Menu */
+    .navbar__menu {
+        position: absolute;
+        padding: var(--spacing-24);
+        top: 126px;
+        left: 0;
+        background-color: var(--dark-bg-solid);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 50%;
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+    }
+
+    .navbar__toggle {
+        display: flex !important;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .navbar__toggle span {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+
+    .close span {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .close span :nth-child(2) {
+        display: none;
+    }
+
+    .close span :nth-child(3) {
+        transform: rotate(45deg) translate(-5px, 1px);
+    }
+
+    .open {
+        transform: translateX(0) !important;
+    }
+
     .list{
         display: flex;
         flex-direction: column;
@@ -291,12 +341,12 @@ td {
 }
 
 @media screen and (max-width: 425px) {
-    header {
-        padding: var(--spacing-20);
+    .navbar__menu {
+        top: 90px;
     }
 
-    .navbar__menu {
-        position: absolute;
+    header {
+        padding: var(--spacing-20);
     }
 
     .finder__content{
@@ -344,7 +394,7 @@ td {
     }
 
     .navbar__link {
-        font-size: var(--font-small);
+        font-size: var(--font-xsmall);
     }
 
     .footer {
