@@ -85,11 +85,6 @@ img {
     width: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* HEADER */
 header {
     background-color: var(--dark-bg-solid);
@@ -126,6 +121,7 @@ header {
 /* PRODUCT FINDER */
 .finder__content {
     display: flex;
+    align-items: center;
     gap: var(--spacing-12);
     padding: var(--spacing-36) 0;
 }
@@ -136,6 +132,7 @@ header {
 
 .finder__input {
     width: 530px;
+    height: 44.28px;
     border: 2px solid var(--dark-bg-solid);
     border-radius: 6px;
 }
@@ -166,7 +163,7 @@ header {
     gap: var(--spacing-36);
     font-size: var(--font-large);
     font-weight: 700;
-    padding-right: 13.5rem;
+    padding-right: 10rem;
 }
 
 .listTitle__button {
@@ -183,8 +180,6 @@ header {
 
 /* TABLE */
 table {
-    width: 1093.77px;
-    height: 844.45px;
     padding: var(--spacing-24);
 }
 
@@ -192,6 +187,7 @@ th {
     font-size: var(--font-large);
     font-weight: 700;
     text-align: left;
+    padding: var(--spacing-8) 0;
 
     &:first-child {
         text-align: center;
@@ -235,4 +231,177 @@ td {
 .footer__copy {
     margin-top: var(--spacing-36);
     text-align: center;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1200px) {
+    table {
+        max-width: 100vw;
+    }
+
+    .listTitle__text{
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 1126px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Burger Menu */
+    .navbar__menu {
+        position: absolute;
+        padding: var(--spacing-24);
+        top: 126px;
+        left: 0;
+        background-color: var(--dark-bg-solid);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 50%;
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+    }
+
+    .navbar__toggle {
+        display: flex !important;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .navbar__toggle span {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+
+    .close span {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .close span :nth-child(2) {
+        display: none;
+    }
+
+    .close span :nth-child(3) {
+        transform: rotate(45deg) translate(-5px, 1px);
+    }
+
+    .open {
+        transform: translateX(0) !important;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .finder__input {
+        width: 300px;
+        height: 30px;
+    }
+
+    .listTitle {
+        gap: 150px;
+    }
+
+    .listTitle__title {
+        font-size: var(--font-large);
+    }
+
+    .listTitle__text {
+        font-size: var(--font-medium);
+        padding-right: 4rem;
+        gap: var(--spacing-24);
+    }
+
+    .listTitle__button {
+        width: 34px;
+    }
+
+    th, td {
+        font-size: var(--font-small);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navbar__menu {
+        top: 90px;
+    }
+
+    header {
+        padding: var(--spacing-20);
+    }
+
+    .finder__content{
+        justify-content: center;
+    }
+
+    .finder__cover>img {
+        width: 34px;
+    }
+
+    .finder__input::placeholder {
+        font-size: var(--font-xsmall);
+    }
+
+    .listTitle {
+        padding: 0 2rem;
+    }
+
+    .listTitle__title {
+        font-size: var(--font-medium);
+        
+    }
+
+    .listTitle__text {
+        font-size: var(--font-xsmall);
+        gap: var(--spacing-24);
+        padding-right: 0rem;
+    }
+
+    .listTitle__button {
+        width: 34px;
+    }
+
+    th, td {
+        font-size: var(--font-xsmall);
+        padding-right: 1rem;
+    }
+
+    .listTitle__button {
+        width: 25px;
+    }
+
+    td>button {
+        width: 25px;
+    }
+
+    .navbar__link {
+        font-size: var(--font-xsmall);
+    }
+
+    .footer {
+        padding: var(--spacing-28);
+    }
+
+    .footer__copy {
+        font-size: var(--font-xsmall);
+    }
 }
