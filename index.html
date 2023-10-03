@@ -15,12 +15,12 @@
                     <img src="./assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
                 </a>
             </picture>
-            <ul class="navbar__menu">
+            <ul class="navbar__menu" id="_items">
                 <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="./pages/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <a class="navbar__link with-icon">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="" class="submenu__link">Funkos</a>
+                            <a href="./pages/shop.html" class="submenu__link">Funkos</a>
                         </li>
                         <li class="submenu__item">
                             <a href="" class="submenu__link">Remeras</a>
@@ -42,6 +42,11 @@
                     </a>
                 </li><!--logo carrito-->
             </ul>
+            <div class="navbar__toggle" id="_toggle"> <!-- Burger Menu for smartphones -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>   <!-- Header end -->
     <section class="hero">  <!-- Hero start -->
@@ -90,7 +95,7 @@
                         <a class="card-item__link" href="">
                             <picture class="card-item__cover">
                                 <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="./assets/img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de Stormtrooper de la película Star Wars">
+                                <img class="card-item__img--front card-item__img-modify" src="./assets/img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de Stormtrooper de la película Star Wars">
                                 <img class="card-item__img--back" src="./assets/img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de Stormtrooper en caja de la película Star Wars">
                             </picture>
                             <div class="card-item__content">
@@ -161,6 +166,8 @@
         </nav>
         <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Footer end -->
+    <script src="./assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    
 </body>
 </html>
