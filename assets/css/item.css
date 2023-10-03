@@ -10,7 +10,7 @@
     --secondary-solid: #1D84B5;
     --secondary-900: rgba(29, 132, 181, .9);
     --secondary-500: rgba(29, 132, 181, .5);
-    --secondary-300: rgba(29, 132, 181, .5);
+    --secondary-300: rgba(29, 132, 181, .3);
 
     --dark-solid: #1F1F1F;
     --dark-900: rgba(31, 31, 31, .9);
@@ -190,11 +190,72 @@ header {
 
 .card-item__add-sub-items {
     display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "imput add add-cart"
+        "imput sub add-cart";
+    align-items: start;
 }
 
 .card-item__number-items {
-    width: 105.47px;
-    height: 35.24px;
+    padding: var(--spacing-8) 0px;
+    text-align: center;
+    border: 0.5px solid #C9C9C9;
+    width: 106px;
+    height: 35px;
+    font-size: var(--font-large);
+    grid-area: imput;
+    margin: 0px var(--spacing-8) 0px 0px;
+}
+
+::placeholder {
+    color: #747474;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+}
+
+.card-item-add {
+    background: #4F4F4F;
+    border: 0px;
+    display: flex;
+    padding: 4px;
+    grid-area: add;
+    
+}
+
+.card-item-subtract {
+    background: #4F4F4F;
+    border: 0px;
+    display: flex;
+    padding: 6px 5px;
+    grid-area: sub;
+    align-self: center;
+}
+
+.card-item__add-cart {
+    border: 0px;
+    font-size: var(--font-medium);
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    padding: var(--spacing-8) var(--spacing-16);
+    font-family: var(--base-font);
+    grid-area: add-cart;
+    margin: 0px 0px 0px var(--spacing-28);
+}
+
+.card-item__method-pay {
+    color: var(--secondary-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-xsmall);
+    font-weight: 700;
+}
+
+.card-item__link-method{
+    text-decoration-line: underline;
 }
 
 /* SLIDER */
@@ -235,7 +296,7 @@ header {
     font-weight: 500;
     color: var(--light-font-solid);
     background-color: var(--primary-solid);
-    padding: var(--spacing-8) var(--spacing-12);
+    padding: var(--spacing-8) var(--spacing-24);
     position: absolute;
     right: 0;
 }
@@ -248,7 +309,7 @@ header {
     animation: fade .7s;
 }
 
-.ccard-item-slider__content {
+.card-item-slider__content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-12);

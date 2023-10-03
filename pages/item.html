@@ -56,11 +56,19 @@
                 <span class="card-item__price">$ 1799,99</span>
                 <form class="card-item__add-sub-items" action="">
                     <input class="card-item__number-items" type="number" placeholder="0">
-                    <button type="button">+</button>
-                    <button type="button">-</button>
-                    <button type="submit"><a href="./cart.html">Agregar al Carrito</a></button>
+                    <button class="card-item-add" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                            <path d="M3.32121 8.13501V0.13501H4.67879V8.13501H3.32121ZM0 4.8138V3.45622H8V4.8138H0Z" fill="white"/>
+                            </svg>
+                    </button>
+                    <button class="card-item-subtract" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
+                            <path d="M6 0.63501V1.63501H0V0.63501H6Z" fill="white"/>
+                            </svg>
+                    </button>
+                    <button class="card-item__add-cart" type="submit"><a href="./cart.html">Agregar al Carrito</a></button>
                 </form>
-                <p class="card-item__promo"><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+                <p class="card-item__method-pay"><a class="card-item__link-method" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
             </article>
         </section>
         <section class="slider container">   <!-- Slider content-->
