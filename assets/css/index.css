@@ -498,13 +498,17 @@ iconify-icon {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
     .glide__arrow {
         padding: .5rem 0;
     }
+
+    .collection__link {
+        padding:  var(--spacing-16) var(--spacing-24);
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
     header {
         padding: var(--spacing-16);
     }
@@ -515,5 +519,9 @@ iconify-icon {
 
     .hero__text {
         text-align: center;
+    }
+
+    .collection__link {
+        font-size: 1em;
     }
 }
