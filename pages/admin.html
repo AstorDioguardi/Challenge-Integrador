@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/admin.css">
     <title>Admin | Funkoshop</title>
+    <link rel="shortcut icon" href="../assets/img/branding/isotype.svg">
 </head>
 <body>
     <header>    <!-- Start Header -->
@@ -14,7 +15,7 @@
                     <img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
                 </a>
             </picture>
-            <ul class="navbar__menu">
+            <ul class="navbar__menu" id="_items">
                 <li class="navbar__item">
                     <a class="navbar__link" href="./shop.html">VER TIENDA</a>
                 </li>
@@ -25,6 +26,11 @@
                     <a class="navbar__link" href="../index.html">SALIR</a>
                 </li>
             </ul>
+            <div class="navbar__toggle" id="_toggle"> <!-- Burger Menu for smartphones -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
     <main>  <!-- Start Main -->
@@ -36,7 +42,7 @@
                 <input class="finder__input" type="text" placeholder="código, nombre o categoria">
             </article>
         </section>
-        <section class="container">   <!-- Product List -->
+        <section class="list container">   <!-- Product List -->
             <article class="listTitle">
                 <h2 class="listTitle__title">LISTADO DE PRODUCTOS</h2>
                 <label class="listTitle__text">AGREGAR
@@ -189,5 +195,6 @@
         </nav>
         <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
+    <script src="../assets/js/admin.js"></script>
 </body>
 </html>
