@@ -132,6 +132,12 @@ header {
     }
 }
 
+iconify-icon {
+    color: var(--light-font-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
+}
+
 .with-icon {
     display: flex;
     align-items: center;
@@ -166,7 +172,6 @@ header {
     padding: var(--spacing-24) var(--spacing-12);
     width: 24rem;
     height: 60rem;
-
 }
 
 .aside__form {
@@ -188,6 +193,7 @@ header {
     -o-border-radius: 4px;
     height: var(--spacing-36);
     font-size: var(--font-medium);
+    padding: var(--spacing-8);
 }
 
 .aside__form input::placeholder {
@@ -204,6 +210,10 @@ header {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     height: var(--spacing-36);
+}
+
+.select__hidden {
+    color: #B9B9B9;
 }
 
 .aside__form>label {
@@ -240,6 +250,7 @@ header {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    text-align: center;
 }
 
 .aside__form>div span {
@@ -287,12 +298,16 @@ header {
     background-color: var(--dark-solid);
 }
 
+.select {
+    padding: var(--spacing-8);
+}
 
 .fa-check {
     position: absolute;
     left: 3px;
     bottom: 1px;
     font-size:var(--font-medium);
+    color: #FF3333;
 }
 
 .checkbox__i {
@@ -369,6 +384,7 @@ header {
 
 .card-item__cover img {
     animation: fade .7s;
+    height: 270px;
 }
 
 .card-item__content {
@@ -425,3 +441,11 @@ header {
     }
 }
 
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+    .navbar__toggle {
+        display: flex;
+        position: absolute;
+    }
+}

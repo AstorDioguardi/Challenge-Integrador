@@ -16,19 +16,8 @@
                 </a>
             </picture>
             <ul class="navbar__menu" id="_items">
-                <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="./shop.html" class="submenu__link">Funkos</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Remeras</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Llaveros</a>
-                        </li>
-                    </ul>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../index.html">INICIO</a>
                 </li>
                 <li class="navbar__item">
                     <a class="navbar__link" href="./contact.html">CONTACTO</a>
@@ -56,7 +45,8 @@
                         <label for="buscar">BUSCAR</label>
                         <input type="text" id="buscar" name="buscar" placeholder="ítem o categoría">
                         <label for="ordenar">ORDENAR POR</label>
-                        <select name="ordenar" id="ordenar">
+                        <select class="select" name="ordenar" id="ordenar">
+                            <option class="select__hidden" hidden selected>Seleccionar</option>
                             <option value="mayor a menor">Mayor a menor</option>
                             <option value="menor a mayor">Menor a mayor</option>
                             <option value="mas relevantes">Más relevante</option>
@@ -73,22 +63,22 @@
                         <ul>
                             <li>
                                 <input type="checkbox" id="nuevos" name="nuevos" class="aside__ul--checkbox checkbox__nuevos">
-                                <label for="nuevos" class="checkbox__i--nuevos checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="nuevos" class="checkbox__i--nuevos checkbox__i"><i class="fa-solid fa-check"></i></label>
                                 <label for="nuevos" class="labelText">NUEVOS</label>     
                             </li>
                             <li>
                                 <input type="checkbox" id="edicionEspecial" name="edicionEspecial" class="aside__ul--checkbox checkbox__edEsp">
-                                <label for="edicionEspecial" class="checkbox__i--edEsp checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="edicionEspecial" class="checkbox__i--edEsp checkbox__i"><i class="fa-solid fa-check"></i></label>
                                 <label for="edicionEspecial" class="labelText">EDICIÓN ESPECIAL</label>
                             </li>
                             <li>
                                 <input type="checkbox" id="ofertas" name="ofertas" class="aside__ul--checkbox checkbox__ofertas">
-                                <label for="ofertas" class="checkbox__i--ofertas checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="ofertas" class="checkbox__i--ofertas checkbox__i"><i class="fa-solid fa-check"></i></label>
                                 <label for="ofertas" class="labelText">OFERTAS</label>
                             </li>
                             <li>
                                 <input type="checkbox" id="favoritos" name="favoritos" class="aside__ul--checkbox checkbox__favoritos">
-                                <label for="favoritos" class="checkbox__i--favoritos checkbox__i"><i class="fa-solid fa-check" style="color: #FF3333;"></i></label>
+                                <label for="favoritos" class="checkbox__i--favoritos checkbox__i"><i class="fa-solid fa-check"></i></label>
                                 <label for="favoritos" class="labelText">FAVORITOS</label>
                             </li>
                         </ul>
@@ -137,7 +127,7 @@
                                 </picture>
                                 <div class="card-item__content">
                                     <p class="card-item__licence">CHEETOS</p>
-                                    <h4 class="card-item__name">CHEETOS</h4>
+                                    <h4 class="card-item__name">CHESTER CHEETAH</h4>
                                     <p class="card-item__price">$ 15.000</p>
                                     <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                                 </div>
@@ -266,5 +256,7 @@
         </nav>
         <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://kit.fontawesome.com/891dc1301c.js" crossorigin="anonymous"></script>
 </body>
 </html>
