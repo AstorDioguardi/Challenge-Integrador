@@ -419,6 +419,50 @@ iconify-icon {
     grid-area: navbarPages;
 }
 
+/* NAV PAGES */
+
+.pageNavigation {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    margin-bottom: var(--spacing-68);
+    gap: 12px;
+}
+
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--base-font);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    color: var(--dark-solid);
+}
+
+.page-link:active {
+    color: var(--primary-solid);
+    border-color: var(--primary-solid);
+}
+
+.page-link_path {
+    width: 16.5px;
+    height: 10.19px;
+}
+
+.page-link_img {
+    width: 1.65em;
+}
+
+.chevronRight {
+    transform: rotate(180deg);
+}
+
 /* FOOTER */
 .footer {
     background-color: var(--dark-bg-solid);
