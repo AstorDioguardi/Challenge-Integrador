@@ -218,3 +218,50 @@ input
     margin-top: var(--spacing-12);
 }
 
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; /* Cambia el tamaño de fuente base para dispositivos móviles */
+    }
+
+    header {
+        padding: var(--spacing-16); /* Reduce el espacio en el encabezado */
+    }
+
+    .form-container {
+        font-size: var(--font-xsmall); /* Ajusta el tamaño de fuente para dispositivos móviles */
+        padding: var(--spacing-12); /* Reduce el espacio en el formulario */
+    }
+
+    /* Agrega estilos específicos para elementos en dispositivos móviles */
+    .navbar-menu {
+        flex-direction: column; /* Cambia la dirección de los elementos del menú */
+        gap: var(--spacing-12); /* Espacio entre elementos del menú */
+    }
+
+    .navbar-link {
+        padding: var(--spacing-8) var(--spacing-12); /* Ajusta el espaciado de los enlaces del menú */
+    }
+
+    /* Agrega estilos para textarea en dispositivos móviles */
+    textarea {
+        height: 10em; /* Ajusta la altura del textarea */
+        margin: var(--spacing-12) 0;
+    }
+
+    /* Agrega estilos para los botones en dispositivos móviles */
+    .btn-principal {
+        width: 60%; /* Ocupa todo el ancho disponible */
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+
+    /* Agrega estilos para form-bloque en dispositivos móviles */
+    .form-bloque {
+        flex-direction: column; /* Cambia la dirección de los elementos del form-bloque */
+        margin-bottom: var(--spacing-16); /* Ajusta el espacio entre bloques */
+    }
+
+    .form-bloque .form-item {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: var(--spacing-12) 0; /* Espacio entre elementos */
+    }
+}
