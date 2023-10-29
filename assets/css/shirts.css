@@ -203,6 +203,7 @@ iconify-icon {
 }
 
 .aside__form>select {
+    font-size: var(--font-xsmall);
     border: 2px var(--dark-solid) solid;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -251,6 +252,7 @@ iconify-icon {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     text-align: center;
+    font-size: var(--font-xsmall);
 }
 
 .aside__form>div span {
@@ -296,10 +298,6 @@ iconify-icon {
 
 .aside__ul--checkbox:checked {
     background-color: var(--dark-solid);
-}
-
-.select {
-    padding: var(--spacing-8);
 }
 
 .fa-check {
