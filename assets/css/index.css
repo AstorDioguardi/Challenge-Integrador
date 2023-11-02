@@ -401,6 +401,10 @@ iconify-icon {
         z-index: 3;
     }
 
+    .show-menu {
+        transform: translateX(0);
+    }
+
     .navbar__toggle {
         display: flex !important;
         flex-direction: column;
@@ -417,20 +421,16 @@ iconify-icon {
         transition: all 0.2s linear;
     }
 
-    .close span {
+    .navbar__toggle.open span {
         transform: rotate(45deg) translate(0px, 0px);
     }
 
-    .close span:nth-child(2) {
+    .navbar__toggle.open span:nth-child(2) {
         display: none;
     }
 
-    .close span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, 1px);
-    }
-
-    .open {
-        transform: translateX(0) !important;
+    .navbar__toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(-5px, 1px);
     }
 
     /* Collection */
@@ -448,11 +448,9 @@ iconify-icon {
 }
 
 @media screen and (max-width: 426px) {
-    header{
-        padding: var(--spacing-36) var(--spacing-16);
-    }
+    header,
     .hero,
-    .footer {
+    .footer{
         padding: var(--spacing-36) var(--spacing-16);
     }
 
