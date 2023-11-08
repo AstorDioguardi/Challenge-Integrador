@@ -234,12 +234,6 @@ header {
 }
 
 /* MEDIA QUERY */
-@media screen and (max-width: 1025px) {
-    .form {
-        
-    }
-}
-
 @media screen and (max-width: 768px) {
     /* Burger Menu */
     .navbar__menu {
