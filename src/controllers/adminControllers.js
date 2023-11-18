@@ -16,4 +16,4 @@ const adminControllers = {
     }
 }
 
-module.exports = adminControllers;
+export default adminControllers;

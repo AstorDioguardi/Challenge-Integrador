@@ -6,4 +6,4 @@ const authControllers = {
     logout: (req, res) => res.send('Route for Logout View')
 }
 
-module.exports = authControllers;
+export default authControllers;

@@ -25,4 +25,4 @@ const shopControllers = {
     }
 }
 
-module.exports = shopControllers;
+export default shopControllers;

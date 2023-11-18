@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import adminControllers from '../controllers/adminControllers.js';
+
 const router = express.Router();
-const adminControllers = require('../controllers/adminControllers');
 
 router.get('/', adminControllers.admin);
 router.get('/create', adminControllers.create);
@@ -9,4 +10,4 @@ router.get('/edit/:id', adminControllers.edit);
 router.post('/edit/:id', adminControllers.editItem);
 router.delete('/delete/:id', adminControllers.deleteItem);
 
-module.exports = router;
+export default router;
