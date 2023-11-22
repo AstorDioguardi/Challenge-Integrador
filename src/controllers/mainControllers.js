@@ -5,4 +5,4 @@ const mainControllers = {
     faqs: (req, res) => res.send('Route for faqs View')
 }
 
-module.exports = mainControllers;
+export default mainControllers;

@@ -1,4 +1,8 @@
+
 @import url(./mainStyles.css);
+
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
 
 /* HEADER */
 header {
@@ -195,10 +199,6 @@ input[type=number]::-webkit-outer-spin-button {
     right: 0;
 }
 
-.slider__items {
-    display: flex;
-    gap: var(--spacing-24);
-}
 
 .card-item-slider__cover {
     display: flex;

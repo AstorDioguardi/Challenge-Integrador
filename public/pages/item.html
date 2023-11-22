@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item | Funkoshop</title>
     <link rel="shortcut icon" href="../assets/img/branding/isotype.svg">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
     <link rel="stylesheet" href="../assets/css/item.css">
 </head>
 <body>
@@ -62,13 +60,13 @@
                 <p class="card-item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
                 <span class="card-item__price">$ 1799,99</span>
                 <form class="card-item__add-sub-items" action="">
-                    <input class="card-item__number-items" type="number" placeholder="0">
-                    <button class="card-item-add" type="button">
+                    <input class="card-item__number-items" type="number" name="quantity" id="quantity" placeholder="0">
+                    <button id="add" class="card-item-add" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
                             <path d="M3.32121 8.13501V0.13501H4.67879V8.13501H3.32121ZM0 4.8138V3.45622H8V4.8138H0Z" fill="white"/>
                             </svg>
                     </button>
-                    <button class="card-item-subtract" type="button">
+                    <button id="subtract" class="card-item-subtract" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
                             <path d="M6 0.63501V1.63501H0V0.63501H6Z" fill="white"/>
                             </svg>
@@ -164,21 +162,7 @@
     <script src="../assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script>
-        new Glide ('.glide', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 3,
-            gap: 30,
-            breakpoints: {
-                991: {
-                    perView: 2
-                },
-                425: {
-                    perView: 1
-                }
-            }
-        }).mount();
-    </script>
+    <script src="../assets/js/item.js"></script>
+    <script src="../assets/js/glide.js"></script>
 </body>
 </html>
