@@ -1,6 +1,6 @@
-async function loadProducts() {
+async function loadProdcuts() {
     try {
-        const response = await fetch('./shirtsProducts.json')
+        const response = await fetch('./shopProducts.json')
         const data = await response.json()
 
         const productsSection = document.getElementById('products-section')
@@ -8,14 +8,15 @@ async function loadProducts() {
         productUl.classList.add('galery__items')
 
         data.products.forEach(product => {
-        const productLi = document.createElement('li')
-        productLi.classList.add('galery__item')
-        productLi.innerHTML = `
+            const productLi = document.createElement('li')
+            productLi.classList.add('galery__item')
+            productLi.innerHTML = `
             <article class="card-item">
                 <a class="card-item__link" href="">
                     <picture class="card-item__cover">
                         <span class="card-item__tag">NUEVO</span>
-                        <img class="card-item__img" src=${product.img} alt=${product.alt}>
+                        <img class="card-item__img--front" src=${product.img1} alt=${product.alt1}>
+                        <img class="card-item__img--back" src=${product.img2} alt=${product.alt2}>
                     </picture>
                 </a>
                     <div class="card-item__content">
@@ -30,13 +31,13 @@ async function loadProducts() {
                     </div>
             </article>`
         productUl.appendChild(productLi)
-        });
-        
+        })
+
         productsSection.appendChild(productUl)
-    } 
+    }
     catch (err) {
-        console.log("Error al cargar los productos", err);
+        console.log("Error al cargar los productos", err)
     }
 }
 
-window.addEventListener('load', loadProducts)
+window.addEventListener('load', loadProdcuts)

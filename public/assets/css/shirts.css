@@ -163,6 +163,7 @@ iconify-icon {
     -o-border-radius: 4px;
     text-align: center;
     font-size: var(--font-xsmall);
+    padding-top: .3rem;
 }
 
 .aside__form>div span {
