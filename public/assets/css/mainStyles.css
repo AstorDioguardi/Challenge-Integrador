@@ -85,7 +85,10 @@ img {
     width: 100%;
 }
 
+/*  EL CONTAINER DEBE IR EN LA MEDIA QUERY DE MIN-WIDTH 1024px
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+*/
