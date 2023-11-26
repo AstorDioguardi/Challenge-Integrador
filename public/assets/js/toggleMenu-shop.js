@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('_toggle');
     const menu = document.getElementById('menu');
-    const aside = document.getElementById('aside');
 
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('show-menu');
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 768) {
             menu.classList.remove('show-menu');
             menuToggle.classList.remove('open');
-            aside.classList.remove('show-menu');
         }
     });
 });
