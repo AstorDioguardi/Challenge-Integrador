@@ -33,6 +33,10 @@ header {
     }
 }
 
+.navbar__toggle {
+    display: none;
+}
+
 /* PRODUCT FINDER */
 .finder__content {
     display: flex;
@@ -47,16 +51,17 @@ header {
 
 .finder__input {
     width: 530px;
-    height: 44.28px;
+    height: 40px;
     border: 2px solid var(--dark-bg-solid);
     border-radius: 6px;
+    padding-left: var(--spacing-12);
+    font-size: var(--font-medium);
 }
 
 .finder__input::placeholder {
-    font-size: var(--font-small);
+    font-size: var(--font-xsmall);
     font-weight: 500;
     color: #B9B9B9;
-    padding: var(--spacing-16);
 }
 
 /* LIST */
@@ -109,7 +114,7 @@ th {
     }
 }
 
-tr>td:last-child{
+td:nth-child(6){
     display: flex;
     justify-content: flex-end;
     padding-left: var(--spacing-12);
@@ -148,18 +153,7 @@ td {
     text-align: center;
 }
 
-/* MEDIA QUERY */
-
-@media screen and (max-width: 1200px) {
-    table {
-        max-width: 100vw;
-    }
-
-    .listTitle__text{
-        padding-right: 3rem;
-    }
-}
-
+/* RESPONSIVE */
 @media screen and (min-width: 1024px) {
     .container {
         max-width: 1200px;
@@ -171,7 +165,17 @@ td {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+    table {
+        max-width: 100vw;
+    }
+
+    .listTitle__text{
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
     /* Burger Menu */
     .navbar__menu {
         position: absolute;
@@ -184,9 +188,13 @@ td {
         align-items: flex-start;
         justify-content: space-evenly;
         width: 50%;
-        height: 50%;
         transform: translateX(-100%);
         transition: 0.3s ease all;
+        z-index: 3;
+    }
+
+    .show-menu {
+        transform: translateX(0);
     }
 
     .navbar__toggle {
@@ -205,20 +213,16 @@ td {
         transition: all 0.2s linear;
     }
 
-    .close span {
+    .navbar__toggle.open span {
         transform: rotate(45deg) translate(0px, 0px);
     }
 
-    .close span :nth-child(2) {
+    .navbar__toggle.open span:nth-child(2) {
         display: none;
     }
 
-    .close span :nth-child(3) {
-        transform: rotate(45deg) translate(-5px, 1px);
-    }
-
-    .open {
-        transform: translateX(0) !important;
+    .navbar__toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(-6px, 2px);
     }
 
     .list{
@@ -227,9 +231,14 @@ td {
         align-items: center;
     }
 
+    .finder__content {
+        margin-left: var(--spacing-24);
+    }
+
     .finder__input {
         width: 300px;
         height: 30px;
+        font-size: var(--font-small);
     }
 
     .listTitle {
@@ -255,7 +264,7 @@ td {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     .navbar__menu {
         top: 90px;
     }
@@ -266,6 +275,7 @@ td {
 
     .finder__content{
         justify-content: center;
+        margin: 0;
     }
 
     .finder__cover>img {
@@ -278,6 +288,7 @@ td {
 
     .listTitle {
         padding: 0 2rem;
+        gap: 48px;
     }
 
     .listTitle__title {
@@ -293,6 +304,10 @@ td {
 
     .listTitle__button {
         width: 34px;
+    }
+
+    table {
+        padding: var(--spacing-24) 0;
     }
 
     th, td {
@@ -318,5 +333,53 @@ td {
 
     .footer__copy {
         font-size: var(--font-xsmall);
+    }
+}
+
+@media screen and (max-width: 376px) {
+    /* EDIT & DELETE ICONS MENU */
+    td:nth-child(4),
+    td:nth-child(5),
+    td:nth-child(6){
+        padding: var(--spacing-8) 0;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    /* NAVBAR */
+    .navbar__menu {
+        top: 85px;
+    }
+
+    .navbar__link,
+    .navbar__item {
+        padding: 0;
+    }
+
+    /* INPUT */
+    .finder {
+        margin: 0 var(--spacing-8);
+    }
+
+    .finder__input {
+        font-size: var(--font-xsmall);
+    }
+
+    /* LIST TITLE */
+    .listTitle__title {
+        font-size: var(--font-xsmall);
+    }
+
+    .listTitle__text {
+        gap: var(--spacing-12);
+    }
+
+    /* TABLE */
+    th {
+        font-size: 1.2rem;
+    }
+
+    td {
+        font-size: 1rem;
     }
 }
