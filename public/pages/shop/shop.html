@@ -50,9 +50,15 @@
             </div>
         </nav>
     </header>   <!-- Header end -->
-    <main >
+    <main>
+        <div class="filter" id="_filter">
+            <span class="filter__span">Filtrar</span>
+            <span class="filter__img" id="toggleAside">
+                <img src="../../assets/img/icons/filter.svg" alt="Icono de filtro">
+            </span>
+        </div>
         <div class="main container">
-            <aside class="aside container"> <!--ASIDE-->
+            <aside class="aside container" id="filterAside"> <!--ASIDE-->
                 <form action="" method="" class="aside__form">
                     <label for="buscar">BUSCAR</label>
                     <input type="text" id="buscar" name="buscar" placeholder="item o categoría">
@@ -162,6 +168,7 @@
     <script src="../../assets/js/toggleMenu-shop.js"></script>
     <script src="../../assets/js/pagination.js"></script>
     <script src="./shop-products.js"></script>
+    <script src="../../assets/js/toggleFilter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/891dc1301c.js" crossorigin="anonymous"></script>
 </body>
