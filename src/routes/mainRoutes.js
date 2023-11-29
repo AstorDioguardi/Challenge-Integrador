@@ -8,5 +8,4 @@ router.get('/contact', mainControllers.contact);
 router.get('/about', mainControllers.about);
 router.get('/faqs', mainControllers.faqs);
 
-
 export default router;
