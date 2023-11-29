@@ -4,6 +4,7 @@
 /*HEADER*/
 
 header{
+    background-color: var(--dark-bg-solid);
     padding: var(--spacing-36);
 }
 .navbar{
@@ -103,7 +104,7 @@ input
 }
 
 /*FOOTER*/
-.footer {
+footer {
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-68);
 }

@@ -1,0 +1,74 @@
+@import url(./mainStyles.css);
+h2{
+    align-self: center;
+}
+
+/*HEADER*/
+header{
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+.navbar{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar-logo{
+    max-width: 372px;
+    max-height: 65.19px;
+}
+
+.navbar-link{
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .2s ease-in-out;
+}
+
+.navbar-link:hover{
+    background-color: var(--primary-900);
+}
+
+/*FOOTER*/
+
+footer {
+    background-color:var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.footer-copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
+    padding-bottom: var(--spacing-12);
+}
+
+.navbar-menu-footer{
+    display: block;
+    align-items: center; 
+    gap: var(--spacing-20);
+}
+
+.navbar-menu-footer, .footer-logo{
+    margin-top: var(--spacing-12);
+}
+
+/*FORM*/
+
+.btn-principal{
+    width: 103px;
+    height: 39px;
+    background-color: var(--primary-solid);
+    color: var(--light-bg-solid);
+    padding: var(--spacing-12) var(--spacing-24);
+    border: none;
+    margin-right: var(--spacing-16);
+}
+
