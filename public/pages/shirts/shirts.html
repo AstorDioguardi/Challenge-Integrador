@@ -16,9 +16,17 @@
                     <img src="../../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
                 </a>
             </picture>
-            <ul class="navbar__menu" id="_items">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../index.html">INICIO</a>
+            <ul class="navbar__menu" id="menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="../shop/shop.html" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="navbar__item">
                     <a class="navbar__link" href="../contact.html">CONTACTO</a>
@@ -40,8 +48,14 @@
         </nav>
     </header>   <!-- Header end -->
     <main >
+        <div class="filter" id="_filter">
+            <span class="filter__span">Filtrar</span>
+            <span class="filter__img" id="toggleAside">
+                <img src="../../assets/img/icons/filter.svg" alt="Icono de filtro">
+            </span>
+        </div>
         <div class="main container">
-            <aside class="aside container"> <!--ASIDE-->
+            <aside class="aside container" id="filterAside"> <!--ASIDE-->
                 <form action="" method="" class="aside__form">
                         <label for="buscar">BUSCAR</label>
                         <input type="text" id="buscar" name="buscar" placeholder="ítem o categoría">
@@ -149,6 +163,8 @@
     </footer> <!-- Footer end -->
     <script src="./shirts-products.js"></script>
     <script src="../../assets/js/pagination.js"></script>
+    <script src="../../assets/js/toggleMenu.js"></script>
+    <script src="../../assets/js/toggleFilter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/891dc1301c.js" crossorigin="anonymous"></script>
 </body>

@@ -1,4 +1,6 @@
-document.getElementById('toggleAside').addEventListener('click', function () {
-    var aside = document.getElementById('filterAside');
+const toggleAside = document.getElementById('toggleAside');
+
+toggleAside.addEventListener('click', () => {
+    const aside = document.getElementById('filterAside');
     aside.classList.toggle('visible');
-  });
+  })

@@ -36,7 +36,7 @@ header {
 /* REGISTER */
 
 .register {
-    margin: var(--spacing-36) auto;
+    padding: var(--spacing-36) 0;
 }
 
 .register__title {
@@ -121,10 +121,7 @@ header {
 }
 
 /* FOOTER */
-.footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
-}
+/* se encuentra dentro de mainStyles.css */
 
 .navbar__item--li {
     padding: var(--spacing-8) var(--spacing-16);
@@ -133,4 +130,12 @@ header {
 .footer__copy {
     margin-top: var(--spacing-36);
     text-align: center;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }

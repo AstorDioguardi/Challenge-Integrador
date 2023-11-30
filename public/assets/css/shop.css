@@ -39,7 +39,15 @@ header {
 
     &:hover {
         background-color: var(--primary-900);
+        text-decoration: none;
+        color: var(--light-font-solid);
     }
+}
+
+iconify-icon {
+    color: var(--light-font-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
 }
 
 .with-icon {
@@ -68,11 +76,12 @@ header {
 
     &:hover{
         background-color: var(--primary-900);
+        text-decoration: none;
+        color: var(--light-font-solid);
     }
 }
 
 /* ASIDE */
-
 .filter {
     display: none;
 }
@@ -85,17 +94,7 @@ header {
     position: relative;
 }
 
-.navbar__toggle-aside {
-    display: none; /* Oculta el ícono de menú hamburguesa en tamaños mayores a 768px */
-}
-
-
-
 .aside__form {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, var(--spacing-24));
-    gap: var(--spacing-8); */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -106,7 +105,6 @@ header {
 }
 
 .aside__form>input {
-    /*silousoparatodoslosdecendientesserompeeldiseñodel<ul>*/
     border: 2px var(--dark-solid) solid;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -162,7 +160,7 @@ header {
     flex-shrink: 1;
     flex-grow: 2;
     width: var(--spacing-36);
-    /*sinocolocoeltamañoprovocaqueelcontenedorocupemasdelespaciodesignado*/height: var(--spacing-24);
+    height: var(--spacing-24);
     border: 2px var(--dark-solid) solid;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -194,7 +192,7 @@ header {
     margin-left: var(--spacing-16);
 }
 
-.aside__form>ul>li { /*solo es para que los position absolute lo tomen como punto de inicio*/
+.aside__form>ul>li {
     position: relative;
 }
 
@@ -204,7 +202,7 @@ header {
 }
 
 .aside__ul--checkbox {
-    /*quitolaaparienciapordefectoyleaplicounanueva*/appearance: none;
+    appearance: none;
     cursor: pointer;
     border: 2px var(--dark-solid) solid;
     border-radius: 4px;
@@ -217,19 +215,19 @@ header {
 }
 
 .aside__ul--checkbox:checked {
-    background-color: var(--dark-solid); /*cuestionable desición estetica parte 1*/
+    background-color: var(--dark-solid);
 }
 
 
-.fa-check { /*uso la clase que ya tiene el icono*/
-    position: absolute; /*Como se perdieron las tildes del checkbox, agregue una nueva y con position absolute las ubico*/
+.fa-check {
+    position: absolute;
     left: 2px;
     bottom: 10px;
     font-size:var(--font-medium);
 }
 
 .checkbox__i {
-    opacity: 0; /*La tilde queda invisible, uso una clase generica oara el primer estado*/
+    opacity: 0;
 }
 
 .checkbox__nuevos:checked ~ .checkbox__i--nuevos { /*uso clases individuales para actualizar su visuslización por separado*/
@@ -377,15 +375,7 @@ header {
 }
 
 /* FOOTER */
-.footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
-}
-
-.footer__copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
-}
+/* se encuentra dentro de mainStyles.css */
 
 /* ANIMATIONS */
 @keyframes fade {

@@ -261,15 +261,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* FOOTER */
-.footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
-}
-
-.footer__copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
-}
+/* se encuentra dentro de mainStyles.css */
 
 /* ANIMATIONS */
 @keyframes fade {

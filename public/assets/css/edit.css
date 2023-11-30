@@ -104,16 +104,7 @@ input
 }
 
 /*FOOTER*/
-footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
-}
-
-.footer-copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
-    padding-bottom: var(--spacing-12);
-}
+/* se encuentra dentro de mainStyles.css */
 
 .navbar-menu-footer{
     display: block;

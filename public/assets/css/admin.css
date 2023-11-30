@@ -33,6 +33,10 @@ header {
     }
 }
 
+.navbar__item--li {
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
 .navbar__toggle {
     display: none;
 }
@@ -139,19 +143,7 @@ td {
 }
 
 /* FOOTER */
-.footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
-}
-
-.navbar__item--li {
-    padding: var(--spacing-8) var(--spacing-16);
-}
-
-.footer__copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
-}
+/* se encuentra dentro de mainStyles.css */
 
 /* RESPONSIVE */
 @media screen and (min-width: 1024px) {
