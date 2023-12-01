@@ -1,5 +1,5 @@
 const shopControllers = {
-    shop: (req, res) => res.send('Route for Shop View'),
+    shop: async (req, res) => res.send('Route for Shop View'),
     item: (req, res) => {
         // Acá poner la acción para la ruta GET '/item/:id'
 

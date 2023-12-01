@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="../assets/css/contact.css">
+
+<main>
+    <section class="hero">
+        <article class="hero__content container">
+            <h1 class="hero__title">Contactanos!</h1>
+            <p class="hero__text">Si quieres información sobre cualquiera de nuestros productos o estás interesado en su distribución, rellena nuestro formulario y nos pondremos en contacto contigo lo antes posible.<p>
+        </article>
+    </section>
+    <section class="container">
+        <form action="" class="form">
+            <label for="name" class="form__label">Nombre :</label><br>
+            <input type="text" id="name" autocomplete="given-name" class="form__text" required><br>
+            <label for="email" class="form__label">Correo electrónico :</label><br>
+            <input type="email" id="email" autocomplete="off" class="form__text" required><br>
+            <label for="message" class="form__label">Mensaje :</label><br>
+            <textarea id="message" rows="4" cols="50" placeholder="Escribenos tu mensaje" class="form__textArea" required></textarea><br>
+            <button type="submit" class="form__button">Enviar mensaje</button>
+        </form>
+    </section>
+</main>
+<%- include('../partials/footer') %>

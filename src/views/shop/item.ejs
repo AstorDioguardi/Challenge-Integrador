@@ -1,0 +1,93 @@
+<%- include('partials/header') %>
+<main class="main-container"> <!-- Main start -->
+    <section class="card-item container">
+        <picture class="card-item__cover">
+            <img src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+        </picture>
+        <article class="card-item__content">
+            <p class="card-item__licence">STAR WARS</p>
+            <h3 class="card-item__name">BABY YODA BLUEBALL</h3>
+            <p class="card-item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+            <span class="card-item__price">$ 1799,99</span>
+            <form class="card-item__add-sub-items" action="">
+                <input class="card-item__number-items" type="number" name="quantity" id="quantity" placeholder="0">
+                <button id="add" class="card-item-add" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                        <path d="M3.32121 8.13501V0.13501H4.67879V8.13501H3.32121ZM0 4.8138V3.45622H8V4.8138H0Z" fill="white"/>
+                        </svg>
+                </button>
+                <button id="subtract" class="card-item-subtract" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
+                        <path d="M6 0.63501V1.63501H0V0.63501H6Z" fill="white"/>
+                        </svg>
+                </button>
+                <button class="card-item__add-cart" type="submit"><a href="./cart.html">Agregar al Carrito</a></button>
+            </form>
+            <p class="card-item__method-pay"><a class="card-item__link-method" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+        </article>
+    </section>
+    <section class="slider container glide">   <!-- Slider content-->
+        <h2 class="slider__title">Productos relacionados</h2>
+        <div class="glide__track" data-glide-el="track">
+            <ul class="slider__items glide__slides">
+                <li class="slider__item glide__slide">
+                    <article class="card-item-slider">
+                        <a class="card-item-slider__link" href="">
+                            <picture class="card-item-slider__cover">
+                                <span class="card-item-slider__tag">NUEVO</span>
+                                <img  class="card-item-slider__img--front"src="../assets/img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de un Stormtrooper">
+                                <img class="card-item-slider__img--back" src="../assets/img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de Stormtrooper en caja de la película Star Wars">
+                            </picture>
+                            <div class="card-item-slider__content">
+                                <p class="card-item-slider__licence">STAR WARS</p>
+                                <h4 class="card-item-slider__name">STORMTROOPER LIGHTSABER</h4>
+                                <p class="card-item-slider__price">$ 1799,99</p>
+                                <p class="card-item-slider__promo">3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li class="slider__item glide__slide">
+                    <article class="card-item-slider">
+                        <a class="card-item-slider__link" href="">
+                            <picture class="card-item-slider__cover">
+                                <span class="card-item-slider__tag">NUEVO</span>
+                                <img  class="card-item-slider__img--front"src="../assets/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
+                                <img class="card-item-slider__img--back" src="../assets/img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon">
+                            </picture>
+                            <div class="card-item-slider__content">
+                                <p class="card-item-slider__licence">POKEMON</p>
+                                <h4 class="card-item-slider__name">PIDGEOTTO</h4>
+                                <p class="card-item-slider__price">$ 1799,99</p>
+                                <p class="card-item-slider__promo">3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li class="slider__item glide__slide">
+                    <article class="card-item-slider">
+                        <!--link that leads to the selected product-->
+                        <a class="card-item-slider__link" href="">
+                            <picture class="card-item-slider__cover">
+                                <span class="card-item-slider__tag">NUEVO</span>
+                                <img  class="card-item-slider__img--front"src="../assets/img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood">
+                                <img class="card-item-slider__img--back" src="../assets/img/harry-potter/luna-box.webp" alt="Figura coleccionable Funko de Luna en caja de la película Harry Potter">
+                            </picture>
+                            <div class="card-item-slider__content">
+                                <p class="card-item-slider__licence">HARRY POTTER</p>
+                                <h4 class="card-item-slider__name">LUNA LOVEGOOD LION MASK</h4>
+                                <p class="card-item-slider__price">$ 1799,99</p>
+                                <p class="card-item-slider__promo">3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon class="slider__icon" icon="tabler:chevron-left"></iconify-icon></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon class="slider__icon" icon="tabler:chevron-right"></iconify-icon></button>
+        </div>
+    </section>
+</main> <!-- Main end -->
+<%- include('partials/footer') %>
