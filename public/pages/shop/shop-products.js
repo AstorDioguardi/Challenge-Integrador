@@ -1,6 +1,6 @@
 async function loadProdcuts() {
     try {
-        const response = await fetch('./shopProducts.json')
+        const response = await fetch('/pages/shop/shopProducts.json')
         const data = await response.json()
 
         const productsSection = document.getElementById('products-section')

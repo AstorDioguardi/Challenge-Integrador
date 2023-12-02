@@ -2,8 +2,8 @@
     "products": [
         {
             "id": 0,
-            "img1": "../../assets/img/star-wars/trooper-1.webp",
-            "img2": "../../assets/img/star-wars/trooper-box.webp",
+            "img1": "../assets/img/star-wars/trooper-1.webp",
+            "img2": "../assets/img/star-wars/trooper-box.webp",
             "alt1": "Figura coleccionable Funko de Stormtrooper de la película Star Wars",
             "alt2": "Figura coleccionable Funko de Stormtrooper en caja de la película Star Wars",
             "licence": "STAR WARS",
@@ -13,8 +13,8 @@
         },
         {
             "id": 1,
-            "img1": "../../assets/img/pokemon/pidgeotto-1.webp",
-            "img2": "../../assets/img/pokemon/pidgeotto-box.webp",
+            "img1": "../assets/img/pokemon/pidgeotto-1.webp",
+            "img2": "../assets/img/pokemon/pidgeotto-box.webp",
             "alt1": "Figura coleccionable Funko de Pidgeotto de la serie Pokemon",
             "alt2": "Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon",
             "licence": "POKEMON",
@@ -24,8 +24,8 @@
         },
         {
             "id": 2,
-            "img1": "../../assets/img/harry-potter/luna-1.webp",
-            "img2": "../../assets/img/harry-potter/luna-box.webp",
+            "img1": "../assets/img/harry-potter/luna-1.webp",
+            "img2": "../assets/img/harry-potter/luna-box.webp",
             "alt1": "Figura coleccionable Funko de Luna de la película Harry Potter",
             "alt2": "Figura coleccionable Funko de Luna en caja de la película Harry Potter",
             "licence": "HARRY POTTER",
@@ -35,8 +35,8 @@
         },
         {
             "id": 3,
-            "img1": "../../assets/img/star-wars/trooper-1.webp",
-            "img2": "../../assets/img/star-wars/trooper-box.webp",
+            "img1": "../assets/img/star-wars/trooper-1.webp",
+            "img2": "../assets/img/star-wars/trooper-box.webp",
             "alt1": "Figura coleccionable Funko de Stormtrooper de la película Star Wars",
             "alt2": "Figura coleccionable Funko de Stormtrooper en caja de la película Star Wars",
             "licence": "STAR WARS",
@@ -46,8 +46,8 @@
         },
         {
             "id": 4,
-            "img1": "../../assets/img/pokemon/pidgeotto-1.webp",
-            "img2": "../../assets/img/pokemon/pidgeotto-box.webp",
+            "img1": "../assets/img/pokemon/pidgeotto-1.webp",
+            "img2": "../assets/img/pokemon/pidgeotto-box.webp",
             "alt1": "Figura coleccionable Funko de Pidgeotto de la serie Pokemon",
             "alt2": "Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon",
             "licence": "POKEMON",
@@ -57,8 +57,8 @@
         },
         {
             "id": 5,
-            "img1": "../../assets/img/harry-potter/luna-1.webp",
-            "img2": "../../assets/img/harry-potter/luna-box.webp",
+            "img1": "../assets/img/harry-potter/luna-1.webp",
+            "img2": "../assets/img/harry-potter/luna-box.webp",
             "alt1": "Figura coleccionable Funko de Luna de la película Harry Potter",
             "alt2": "Figura coleccionable Funko de Luna en caja de la película Harry Potter",
             "licence": "HARRY POTTER",
@@ -68,8 +68,8 @@
         },
         {
             "id": 6,
-            "img1": "../../assets/img/star-wars/trooper-1.webp",
-            "img2": "../../assets/img/star-wars/trooper-box.webp",
+            "img1": "../assets/img/star-wars/trooper-1.webp",
+            "img2": "../assets/img/star-wars/trooper-box.webp",
             "alt1": "Figura coleccionable Funko de Stormtrooper de la película Star Wars",
             "alt2": "Figura coleccionable Funko de Stormtrooper en caja de la película Star Wars",
             "licence": "STAR WARS",
@@ -79,8 +79,8 @@
         },
         {
             "id": 7,
-            "img1": "../../assets/img/pokemon/pidgeotto-1.webp",
-            "img2": "../../assets/img/pokemon/pidgeotto-box.webp",
+            "img1": "../assets/img/pokemon/pidgeotto-1.webp",
+            "img2": "../assets/img/pokemon/pidgeotto-box.webp",
             "alt1": "Figura coleccionable Funko de Pidgeotto de la serie Pokemon",
             "alt2": "Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon",
             "licence": "POKEMON",
@@ -90,8 +90,8 @@
         },
         {
             "id": 8,
-            "img1": "../../assets/img/harry-potter/luna-1.webp",
-            "img2": "../../assets/img/harry-potter/luna-box.webp",
+            "img1": "../assets/img/harry-potter/luna-1.webp",
+            "img2": "../assets/img/harry-potter/luna-box.webp",
             "alt1": "Figura coleccionable Funko de Luna de la película Harry Potter",
             "alt2": "Figura coleccionable Funko de Luna en caja de la película Harry Potter",
             "licence": "HARRY POTTER",
