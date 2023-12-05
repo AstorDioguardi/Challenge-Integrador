@@ -1,0 +1,99 @@
+<%- include('../partials/header1') %>
+<link rel="stylesheet" href="/assets/css/cart.css">
+<link rel="stylesheet" href="/assets/css/index.css">
+<%- include('../partials/header2') %>
+<main> <!--     INICIO MAIN --> 
+    <section class="titulos container">    <!--     TITULOS -->        
+        <h1 class="titulos__titulo">CARRITO DE COMPRAS</h1>
+    </section>
+    <section class="subtitulo container">
+        <article class="subtitulo__flex">                 
+            <h3 class="subtitulo__text">Detalle de producto</h3>
+            <h3 class="subtitulo__text">Cantidad</h3>
+            <h3 class="subtitulo__text">Total</h3>
+            <div></div>
+        </article>
+    </section>
+    <section class="card container"> <!--     Tarjeta de Grogu -->
+        <article class="card__imgtext">
+        <picture>
+            <img class="card__image" src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie de Mandalorian">
+        </picture>
+            <article class="card__column">
+                <article class="card__textos">
+                    <h3 class="card__titulo">BABY YODA BLUEBALL</h3>
+                    <p class="card__marca">STAR WARS</p>
+                </article>
+                <article class="card__num">
+                    <p class="card__precio">precio: $ 1799,99</p>
+                </article>
+            </article>
+        </article>                
+            <article class="card__column">
+                <input type="number" class="card__cantidad" value="1">
+            </article>
+            <article class="card__column">
+                <p>$ 3599,98</p>
+            </article>
+            <article class="card__cerrar">
+                <i class="fas fa-times"></i>
+            </article>
+    </section>
+    <section class="card container"> <!--     Tarjeta de Pidgeotto -->
+        <article class="card__imgtext">
+            <picture>
+                <img class="card__image" src="../assets/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie de pokemon">
+            </picture>
+            <article class="card__column">
+                <article class="card__textos">
+                    <h3 class="card__titulo">PIDGEOTTO</h3>
+                    <p class="card__marca">POKEMON</p>
+                </article>
+                <article class="card__num">
+                    <p class="card__precio">precio: $ 1799,99</p>
+                </article>
+            </article>
+        </article>                
+            <article class="card__column">
+                <input type="number" class="card__cantidad" value="1">
+            </article>
+            <article class="card__column">
+                <p>$ 3599,98</p>
+            </article>
+            <article class="card__cerrar">
+                <i class="fas fa-times"></i>
+            </article>
+        </div>
+    </section>
+</div>
+<div class="titulo container"> <!--     Resumen Titulo -->
+    <h2 class="titulo__resumen">RESUMEN</h2>    
+</div> 
+<section class="resumen container">
+    <div class="resumen__tabla">
+    <article class="resumen__filas">
+        <p class="resumen__texto">Cantidad de elementos</p>
+            <p class="resumen__num">3</p>
+        </article>
+        <article class="resumen__filas">
+            <p class="resumen__texto">Subtotal</p>
+            <p class="resumen__num">$ 5.399,97</p>
+        </article>
+        <article class="resumen__filas">
+            <p class="resumen__texto">Envio</p>
+            <p class="resumen__num">$ 0,00</p>
+        </article>  
+        <article class="resumen__filas">                    
+            <p class="resumen__texto">TOTAL</p>
+            <p class="resumen__num">$ 5.399,97</p>
+        </article>
+    </div>
+</section>
+<div class="boton container">
+    <div class="boton__cont">
+        <div class="boton__enlace">
+            <div class="boton__link">IR A PAGAR</div>
+        </div>
+    </div>
+</main> <!--     FIN MAIN -->
+<%- include('../partials/footer') %>

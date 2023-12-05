@@ -1,0 +1,73 @@
+<%- include('../partials/headerAdmin') %>
+<link rel="stylesheet" href="../assets/css/create.css" />
+<main><!--INICIO MAIN-->
+    <section>
+      <div class="container form-container"><!--DIV PRINCIPAL-->
+        <h2>CREAR NUEVO ITEM</h2>
+        <form class="form" id="formulario-create" action="" method="post" enctype="multipart/form-data">
+          <div class="container form-bloque form-item cat-lic-container"><!--CATEGORIA Y LICENCIA-->              
+            <div class="form-item form-combobox">
+              <label class="form-label" for="categoria-item">Categoría</label>
+              <select id="categoria-item">
+                <option hidden selected value="">Selecionar</option>
+                <option value="Figura">Figura</option>
+              </select>
+            </div>
+            <div class="form-item form-combobox">
+              <label class="form-label" for="licencia-item">Licencia</label>
+              <select id="licencia-item">
+                <option hidden selected value="">Selecionar</option>
+                <option value="Licencia">Naruto Shipuden</option>
+              </select>
+            </div>
+          </div><!--FIN CATEGORIA Y LICENCIA-->
+        <div class="form-item form-bloque"><!--inicio primer bloque-->              
+          <div class="form-item ingresar-texto-corto">
+            <label for="nombre-item">Nombre del producto: </label>
+            <input type="text" id="nombre-item" />
+          </div>
+          <textarea id="descripcion-item" placeholder="Descripcion del producto"></textarea>            
+            <div class="form-item ingresar-texto-corto">
+              <label for="sku-item">SKU:</label>
+              <input type="text" id="sku-item" />
+            </div>
+            <div class="form-item ingresar-texto-corto">
+              <label for="precio-item">Precio:</label>
+              <input type="text" id="precio-item" />
+            </div>
+            <div class="form-item ingresar-texto-corto">
+              <label for="stock-item">Stock:</label>
+              <input type="text" id="stock-item" />
+            </div>
+        </div><!--Fin primer bloque-->            
+          <div class="form-item form-bloque segundo-bloque "><!--inicio segundo bloque-->
+            <div class="ingresar-texto-corto">
+              <label for="descuento-item">Descuento:</label>
+              <input type="text" id="descuento-item"/>
+            </div>
+            <div class="form-item form-combobox">
+              <label class="label-edit-item" for="licencia-item">Cuotas:</label>
+              <select id="cuotas-item">
+                <option hidden selected value="">Selecionar</option>
+                <option value="una">1 Cuota sin interés</option>
+                <option value="tres">3 Cuotas sin interés</option>
+                <option value="seis">6 Cuotas sin interés</option>
+              </select>
+            </div>
+          </div><!--fin segundo bloque-->
+          <div class="form-item form-bloque bloque-imagenes">
+            <label for="fileInput">Imágenes:</label>
+            <input type="file" id="fileInput" style="display: none" accept="image/*"multiple/>
+            <button id="chooseFileButton">Elegir Archivos</button>
+            <p id="noFilesText">No se ha seleccionado ningún archivo.</p>
+          </div>
+          <div id="imagePreviews"></div>
+          <div class="botones">
+            <button class="btn-principal" id="btn-agregar">Agregar Producto</button>
+            <button class="btn-principal" id="btn-limpiar">Limpiar</button>
+          </div>
+        </form>
+      </div><!--FIN DIV PRINCIPAL-->        
+    </section>
+  </main> <!--FIN MAIN-->
+<%- include('../partials/footer') %>
