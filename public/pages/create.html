@@ -10,18 +10,27 @@
   <body>
       <header> <!--INICIO HEADER-->       
         <nav class="navbar container">
-          <a class="navbar-logo" href="../index.html"><img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de Funkoshop"/></a>
-          <ul class="navbar-menu">
-            <li class="navbar-item">
-              <a class="navbar-link" href="./shop.html">VER TIENDA</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="./admin.html">ADMIN</a>
-            </li>
-            <li class="navbar-item">
-              <a class="navbar-link" href="../index.html">SALIR</a>
-            </li>
+          <picture class="navbar__logo">
+              <a href="../index.html">
+                  <img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+              </a>
+          </picture>
+          <ul class="navbar__menu" id="menu">
+              <li class="navbar__item">
+                  <a class="navbar__link" href="./shop/shop.html">VER TIENDA</a>
+              </li>
+              <li class="navbar__item">
+                  <a class="navbar__link" href="./admin.html">ADMIN</a>
+              </li>
+              <li class="navbar__item">
+                  <a class="navbar__link" href="../index.html">SALIR</a>
+              </li>
           </ul>
+          <div class="navbar__toggle" id="_toggle"> <!-- Burger Menu for smartphones -->
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
         </nav>
       </header><!--FIN HEADER-->      
     <main><!--INICIO MAIN-->
@@ -94,28 +103,29 @@
         </div><!--FIN DIV PRINCIPAL-->        
       </section>
     </main> <!--FIN MAIN-->   
-    <footer class="footer"><!-- Footer start -->      
+    <footer class="footer">    <!-- Start Footer -->
       <nav class="navbar container">
-        <ul class="navbar-menu-footer">
-          <li class="navbar-item">
-            <a class="navbar-link" href="./shop.html">SHOP</a>
-          </li>
-          <li class="navbar__item--li">
-            <a class="navbar__link" href="./register.html">REGISTRARSE</a>
-          </li>
-          <li class="navbar__item--li">
-            <a class="navbar__link" href="./login.html">INGRESAR</a>
-          </li>
-          <li class="navbar__item--li">
-            <a class="navbar__link" href="./contact.html">CONTACTO</a>
-          </li>
-        </ul>
-        <picture class="footer-logo">
-          <img src="../assets/img/branding/isotype.svg"alt="Isotipo Funko Pop"/>
-        </picture>
+          <ul class="navbar__item">
+              <li class="navbar__item--li">
+                  <a class="navbar__link" href="./shop/shop.html">SHOP</a>
+              </li>
+              <li class="navbar__item--li">
+                  <a class="navbar__link" href="./register.html">REGISTRARSE</a>
+              </li>
+              <li class="navbar__item--li">
+                  <a class="navbar__link" href="./login.html">INGRESAR</a>
+              </li>
+              <li class="navbar__item--li">
+                  <a class="navbar__link" href="./contact.html">CONTACTO</a>
+              </li>
+          </ul>
+          <picture>
+              <img src="../assets/img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+          </picture>
       </nav>
-      <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer><!-- Footer end -->    
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
     <script src="../assets/js/create.js"></script>
+    <script src="../assets/js/toggleMenu.js"></script>
   </body>
 </html> 

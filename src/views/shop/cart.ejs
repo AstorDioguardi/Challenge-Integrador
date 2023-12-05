@@ -2,98 +2,112 @@
 <link rel="stylesheet" href="/assets/css/cart.css">
 <link rel="stylesheet" href="/assets/css/index.css">
 <%- include('../partials/header2') %>
-<main> <!--     INICIO MAIN --> 
-    <section class="titulos container">    <!--     TITULOS -->        
-        <h1 class="titulos__titulo">CARRITO DE COMPRAS</h1>
-    </section>
-    <section class="subtitulo container">
-        <article class="subtitulo__flex">                 
-            <h3 class="subtitulo__text">Detalle de producto</h3>
-            <h3 class="subtitulo__text">Cantidad</h3>
-            <h3 class="subtitulo__text">Total</h3>
-            <div></div>
-        </article>
-    </section>
-    <section class="card container"> <!--     Tarjeta de Grogu -->
-        <article class="card__imgtext">
-        <picture>
-            <img class="card__image" src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie de Mandalorian">
-        </picture>
-            <article class="card__column">
-                <article class="card__textos">
-                    <h3 class="card__titulo">BABY YODA BLUEBALL</h3>
-                    <p class="card__marca">STAR WARS</p>
-                </article>
-                <article class="card__num">
-                    <p class="card__precio">precio: $ 1799,99</p>
-                </article>
-            </article>
-        </article>                
-            <article class="card__column">
-                <input type="number" class="card__cantidad" value="1">
-            </article>
-            <article class="card__column">
-                <p>$ 3599,98</p>
-            </article>
-            <article class="card__cerrar">
-                <i class="fas fa-times"></i>
-            </article>
-    </section>
-    <section class="card container"> <!--     Tarjeta de Pidgeotto -->
-        <article class="card__imgtext">
-            <picture>
-                <img class="card__image" src="../assets/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie de pokemon">
-            </picture>
-            <article class="card__column">
-                <article class="card__textos">
-                    <h3 class="card__titulo">PIDGEOTTO</h3>
-                    <p class="card__marca">POKEMON</p>
-                </article>
-                <article class="card__num">
-                    <p class="card__precio">precio: $ 1799,99</p>
-                </article>
-            </article>
-        </article>                
-            <article class="card__column">
-                <input type="number" class="card__cantidad" value="1">
-            </article>
-            <article class="card__column">
-                <p>$ 3599,98</p>
-            </article>
-            <article class="card__cerrar">
-                <i class="fas fa-times"></i>
-            </article>
-        </div>
-    </section>
-</div>
-<div class="titulo container"> <!--     Resumen Titulo -->
-    <h2 class="titulo__resumen">RESUMEN</h2>    
-</div> 
-<section class="resumen container">
-    <div class="resumen__tabla">
-    <article class="resumen__filas">
-        <p class="resumen__texto">Cantidad de elementos</p>
-            <p class="resumen__num">3</p>
-        </article>
-        <article class="resumen__filas">
-            <p class="resumen__texto">Subtotal</p>
-            <p class="resumen__num">$ 5.399,97</p>
-        </article>
-        <article class="resumen__filas">
-            <p class="resumen__texto">Envio</p>
-            <p class="resumen__num">$ 0,00</p>
-        </article>  
-        <article class="resumen__filas">                    
-            <p class="resumen__texto">TOTAL</p>
-            <p class="resumen__num">$ 5.399,97</p>
-        </article>
-    </div>
+<section class="main__title container">    <!--     TITULO -->        
+    <h1 class="main__title-text">CARRITO DE COMPRAS</h1>
 </section>
-<div class="boton container">
-    <div class="boton__cont">
-        <div class="boton__enlace">
-            <div class="boton__link">IR A PAGAR</div>
+
+<section class="cart-section container"> <!--     MAIN CONTENT -->
+
+    <!-- FILA UNO -->
+    <section class="subtitle">
+        <div class="subtitle__empty"></div>
+        <h3 class="subtitle__text1">Detalle de producto</h3>
+        <h3 class="subtitle__text2">Cantidad</h3>
+        <h3 class="subtitle__text3">Total</h3>
+        <div class="subtitle__empty"></div>
+    </section>
+
+    <!-- FILA 2 -->
+    <section class="card">
+        <div class="card__img-item">
+            <picture class="card__img">
+                <img class="card__img-img" src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie de Mandalorian">
+            </picture>
+            <div class="card__item">
+                <div class="card__item-titles">
+                    <h3 class="card__item-title">BABY YODA BLUEBALL</h3>
+                    <p class="card__item-brand">STAR WARS</p>
+                </div>
+                <div class="card__item-price">
+                    <p class="card__item-price_text">precio: $</p>
+                    <p class="card__item-price_text" id="item-price">1799,99</p>
+                </div>
+            </div>                
+        </div>
+        <div class="card__quantity">
+            <input class="card__quantity-num" id="quantity" type="number" value="2" readonly>
+            <div class="card__quantity-btn">
+                <button id="add" class="card__quantity-add" type="button">+</button>
+                <button id="subtract" class="card__quantity-dlt" type="button">-</button>
+            </div>
+        </div>
+        <div class="card__price">
+            <p class="card__price-num" id="total-price">$ 3599,98</p>
+        </div>
+        <div class="card__delete">
+            <button class="card__delete-button"><img src="../assets/img/icons/delete-icon-cart.svg" class="card__delete-img" alt="Icono del boton eliminar producto del carrito"></button>
+        </div>
+    </section>
+
+    <!-- FILA 3 -->
+    <section class="card">
+        <div class="card__img-item">
+            <picture class="card__img">
+                <img class="card__img-img" src="../assets/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie de Pokemon">
+            </picture>
+            <div class="card__item">
+                <div class="card__item-titles">
+                    <h3 class="card__item-title">PIDGEOTTO</h3>
+                    <p class="card__item-brand">POKEMON</p>
+                </div>
+                <div class="card__item-price">
+                    <p class="card__item-price_text">precio: $</p>
+                    <p class="card__item-price_text" id="item-price">$ 1799,99</p>
+                </div>
+            </div>                
+        </div>
+        <div class="card__quantity">
+            <input class="card__quantity-num" id="quantity" type="number" value="1" readonly>
+            <div class="card__quantity-btn">
+                <button id="add" class="card__quantity-add" type="button">+</button>
+                <button id="add" class="card__quantity-dlt" type="button">-</button>
+            </div>
+        </div>
+        <div class="card__price">
+            <p class="card__price-num" id="total-price">$ 1799,99</p>
+        </div>
+        <div class="card__delete">
+            <button class="card__delete-button"><img src="../assets/img/icons/delete-icon-cart.svg" class="card__delete-img" alt="Icono del boton eliminar producto del carrito"></button>
+        </div>
+    </section>
+</section>
+
+<!-- SUMMARY SECTION -->
+<section class="summary container">
+    <div class="summary__title">
+        <h2 class="summary__title-title">RESUMEN</h2>
+    </div> 
+    <div class="summary__content">
+        <div class="summary__content-title">
+            <p class="summary__content-text">Cantidad de elementos</p>
+            <p class="summary__content-num">2</p>
+        </div>
+        <div class="summary__content-title">
+            <p class="summary__content-text">Subtotal</p>
+            <p class="summary__content-num">$ 5399,97</p>
+        </div>
+        <div class="summary__content-title">
+            <p class="summary__content-text">Envio</p>
+            <p class="summary__content-num">$ 0,00</p>
+        </div>  
+        <div class="summary__content-title">                    
+            <p class="summary__content-text summary__content-total">TOTAL</p>
+            <p class="summary__content-num summary__content-price">$ 5399,97</p>
         </div>
     </div>
+    <section class="button">
+        <button class="button__button">IR A PAGAR</button>
+    </section>
+</section>
 </main> <!--     FIN MAIN -->
 <%- include('../partials/footer') %>

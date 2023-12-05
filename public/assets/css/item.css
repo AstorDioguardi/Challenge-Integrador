@@ -1,71 +1,9 @@
-
 @import url(./mainStyles.css);
+@import url(./mainHeader.css);
+@import url(./mainFooter.css);
 
 @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
 @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
-
-/* HEADER */
-header {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-36);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar__logo {
-    max-width: 300px;
-}
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-20);
-}
-
-.navbar__link {
-    font-size: var(--font-medium);
-    padding: var(--spacing-8) var(--spacing-16);
-    display: inline-block;
-    transition: background .3s ease-in-out;
-    position: relative;
-
-    &:hover {
-        background-color: var(--primary-900);
-    }
-}
-
-.with-icon {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-8);
-}
-
-.with-submenu:hover .submenu {
-    display: block;
-}
-
-.submenu {
-    display: none;
-    width: 300px;
-    position: absolute;
-    background-color: var(--dark-bg-solid);
-    z-index: 3;
-}
-
-.submenu__link {
-    display: block;
-    padding: var(--spacing-8) var(--spacing-16);
-    font-size: var(--font-medium);
-    transition: background .3s ease-in-out;
-
-    &:hover{
-        background-color: var(--primary-900);
-    }
-}
 
 /* CARD-ITEM */
 .card-item {
@@ -260,9 +198,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--secondary-solid);
 }
 
-/* FOOTER */
-/* se encuentra dentro de mainStyles.css */
-
 /* ANIMATIONS */
 @keyframes fade {
     0% {
@@ -275,64 +210,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* MEDIA QUERY */
-@media screen and (min-width: 1024px) {
-    .navbar__toggle {
-        display: flex;
-        position: absolute;
-    }
-}
 @media screen and (max-width: 768px) {
-    /* Burger Menu */
-    .navbar__menu {
-        position: absolute;
-        padding: var(--spacing-24);
-        top: 126px;
-        left: 0;
-        background-color: var(--dark-bg-solid);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        width: 50%;
-        transform: translateX(-100%);
-        transition: 0.3s ease all;
-        z-index: 3;
-    }
-
-    .navbar__toggle {
-        display: flex !important;
-        flex-direction: column;
-        margin: 15px;
-    }
-
-    .navbar__toggle span {
-        width: 30px;
-        height: 4px;
-        background-color: white;
-        margin-bottom: 5px;
-        border-radius: 2px;
-        transform-origin: 5px 0px;
-        transition: all 0.2s linear;
-    }
-
-    .close span {
-        transform: rotate(45deg) translate(0px, 0px);
-    }
-
-    .close span:nth-child(2) {
-        display: none;
-    }
-
-    .close span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, 1px);
-    }
-
-    .open {
-        transform: translateX(0) !important;
-    }
     .slider {
         padding: 0 var(--spacing-16);
     }
+
     .glide__arrow {
         padding: var(--spacing-12) 0;
     }
@@ -342,29 +224,22 @@ input[type=number]::-webkit-outer-spin-button {
     .card-item__add-cart{
         font-size: var(--font-xsmall);
     }
+
     .card-item__add-cart {
         margin: 0px 0px 0px 1rem;
     }
 }
 
 @media screen and (max-width: 426px){
-    header{
-        padding: var(--spacing-36) var(--spacing-16);
-    }
-    .footer {
-        padding: var(--spacing-36) var(--spacing-16);
-    }
     .slider__title {
         font-size: var(--font-large);
     }
-    .navbar__link,
-    .footer__copy {
-        font-size: var(--font-xsmall);
-    }
+
     .card-item-slider__tag {
         font-size: 1em;
         padding: var(--spacing-8) var(--spacing-8);
     }
+
     .slider__items {
         gap: 0;
     }
@@ -398,11 +273,5 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 321px) {
-    header {
-        padding: var(--spacing-16);
-    }
-
-    .navbar__menu {
-        top: 85px;
-    }
+    
 }

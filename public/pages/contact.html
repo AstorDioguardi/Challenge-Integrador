@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +16,31 @@
                 </a>
             </picture>
             <ul class="navbar__menu" id="menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="./shop/shop.html" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="./shirts/shirts.html" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="./shop/shop.html">VER TIENDA</a>
+                    <a class="navbar__link" href="./contact.html">CONTACTO</a>
                 </li>
                 <li class="navbar__item">
                     <a class="navbar__link" href="./login.html">LOGIN</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../index.html">SALIR</a>
-                </li>
+                    <a class="navbar__cart" href="./cart.html">
+                        <img src="../assets/img/icons/cart-icon.svg" alt="Icono de carrito">
+                    </a>
+                </li><!--logo carrito-->
             </ul>
             <div class="navbar__toggle" id="_toggle"> <!-- Burger Menu for smartphones -->
                 <span></span>
@@ -53,16 +68,16 @@
             </form>
         </section>
     </main>
-    <footer class="footer"> <!-- Start Footer -->
+    <footer class="footer"> <!-- Footer start -->
         <nav class="navbar container">
             <ul class="navbar__item">
-                <li class="navbar__item--li">
+                <li class="navbar__item">
                     <a class="navbar__link" href="./shop/shop.html">SHOP</a>
                 </li>
-                <li class="navbar__item--li">
+                <li class="navbar__item">
                     <a class="navbar__link" href="./login.html">INGRESAR</a>
                 </li>
-                <li class="navbar__item--li">
+                <li class="navbar__item">
                     <a class="navbar__link" href="./contact.html">CONTACTO</a>
                 </li>
             </ul>
@@ -71,7 +86,7 @@
             </picture>
         </nav>
         <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer>
-    <script src="../assets/js/contact-menu.js"></script>
+    </footer> <!-- Footer end -->
+    <script src="../assets/js/toggleMenu.js"></script>
 </body>
 </html>
