@@ -30,7 +30,12 @@ const shopControllers = {
 
         res.send('Route for add the current item to the shop cart');
     },
-    cart: (req, res) => res.send('Route for cart View'),
+    cart: (req, res) => res.render('shop/cart', {
+        view: {
+            title: "Cart | Funkoshop"  
+        },
+       
+    }),
     checkout: (req, res) => {
         // Acá poner la acción para la ruta POST '/cart'
 
