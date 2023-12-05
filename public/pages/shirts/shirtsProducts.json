@@ -1,0 +1,85 @@
+{
+    "products": [
+    {
+        "id": 0,
+        "img": "../../assets/img/shirts/alice-cooper.jpg",
+        "alt": "Remera Funko de Alice Cooper",
+        "licence": "ALICE COOPER",
+        "productName": "ALICE COOPER",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 1,
+        "img": "../../assets/img/shirts/big-alfa.jpg",
+        "alt": "Remera Funko de Big Alfa del reality show Gran Hermano",
+        "licence": "GRAN HERMANO",
+        "productName": "BIG ALFA",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 2,
+        "img": "../../assets/img/shirts/cheetos.jpg",
+        "alt": "Remera Funko de Cheetos",
+        "licence": "CHEETOS",
+        "productName": "CHESTER CHEETAH",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 3,
+        "img": "../../assets/img/shirts/chucky.png",
+        "alt": "Remera Funko de Chucky de la película Chucky",
+        "licence": "CHUCKY",
+        "productName": "CHUCKY",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 4,
+        "img": "../../assets/img/shirts/deadpool.jpg",
+        "alt": "Remera Funko de Deadpool de la película Deadpool",
+        "licence": "MARVEL",
+        "productName": "DEADPOOL",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 5,
+        "img": "../../assets/img/shirts/freedy-jason.jpg",
+        "alt": "Remera Funko de Fredy vs Jason",
+        "licence": "THE ULTIMATE DEATH MATCH",
+        "productName": "FREDY vs JASON",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 6,
+        "img": "../../assets/img/shirts/mightguy.jpg",
+        "alt": "Remera Funko de Might Guy del anime Naruto",
+        "licence": "NARUTO",
+        "productName": "MIGHTGUY",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 7,
+        "img": "../../assets/img/shirts/scarface.jpg",
+        "alt": "Remera Funko de Scarface",
+        "licence": "SCARFACE",
+        "productName": "SCARFACE",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    },
+    {
+        "id": 8,
+        "img": "../../assets/img/shirts/zenitsu.jpg",
+        "alt": "Remera Funko de Zenitsu del anime Demon Slayer",
+        "licence": "DEMON SLAYER",
+        "productName": "ZENITSU",
+        "price": "$ 15.000",
+        "promo": "3 CUOTAS SIN INTERÉS"
+    }
+]
+}
