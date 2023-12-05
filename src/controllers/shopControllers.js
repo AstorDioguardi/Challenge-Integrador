@@ -6,6 +6,12 @@ const shopControllers = {
         }
     }),
 
+    shirts: async (req, res) => res.render('shop/shirts', {
+        view: {
+            title: "Shirts | Funkoshop"
+        }
+    }),
+
     item: (req, res) => res.render('shop/item', {
         view: {
             title: "Item | Funkoshop"  

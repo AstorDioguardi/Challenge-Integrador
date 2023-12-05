@@ -9,7 +9,7 @@ main {
 
 /* MAIN TITLE */
 .main__title {
-    padding-bottom: var(--spacing-68);
+    padding: var(--spacing-68) 0;
 }
 
 .main__title-text,
@@ -199,7 +199,7 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-top: var(--spacing-68);
+    padding: var(--spacing-68) 0;
 }
 
 .summary__content {
