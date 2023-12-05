@@ -1,73 +1,6 @@
 @import url(./mainStyles.css);
-
-/* HEADER */
-header {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-36);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar__logo {
-    max-width: 300px;
-}
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-20);
-}
-
-.navbar__link {
-    font-size: var(--font-medium);
-    padding: var(--spacing-8) var(--spacing-16);
-    display: inline-block;
-    transition: background .3s ease-in-out;
-    position: relative;
-
-    &:hover {
-        background-color: var(--primary-900);
-    }
-}
-
-iconify-icon {
-    color: var(--light-font-solid);
-    font-size: var(--font-small);
-    font-weight: 700;
-}
-
-.with-icon {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-8);
-}
-
-.with-submenu:hover .submenu {
-    display: block;
-}
-
-.submenu {
-    display: none;
-    width: 300px;
-    position: absolute;
-    background-color: var(--dark-bg-solid);
-    z-index: 3;
-}
-
-.submenu__link {
-    display: block;
-    padding: var(--spacing-8) var(--spacing-16);
-    font-size: var(--font-medium);
-    transition: background .3s ease-in-out;
-
-    &:hover{
-        background-color: var(--primary-900);
-    }
-}
+@import url(./mainHeader.css);
+@import url(./mainFooter.css);
 
 /* MAIN */
 main {
@@ -188,8 +121,8 @@ main {
 /* Third column */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
 input[type=number] {
@@ -216,7 +149,7 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 6px;
+    padding-left: .6rem;
 }
 
 .card__quantity-add,
@@ -224,15 +157,19 @@ input[type=number] {
     display: flex;
     width: 18px;
     height: 16px;
-    padding: 4px;
+    padding: .4rem;
     justify-content: center;
     align-items: center;
     background-color: var(--primary-900);
     color: var(--light-font-solid);
-    padding: .4rem;
     border: none;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+.card__quantity-dlt {
+    padding-bottom: 0.7rem;
+    padding-left: 0.5rem;
 }
 
 /* Fourth column */
@@ -272,7 +209,7 @@ input[type=number] {
     align-items: flex-start;
     width: 572px;
     height: 197px;
-    gap: 20px;
+    gap: 2rem;
     border-radius: 10px;
     background: var(--light-bg-solid);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
@@ -328,14 +265,4 @@ input[type=number] {
     border: none;
     background-color: var(--primary-900);
     cursor: pointer;
-}
-
-/* FOOTER */
-/* se encuentra dentro de mainStyles.css */
-
-@media screen and (min-width: 1024px) {
-    .container  {
-        max-width: 1200px;
-        margin: 0 auto;
-    }   
 }

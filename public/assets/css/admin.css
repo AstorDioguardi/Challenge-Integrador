@@ -1,45 +1,6 @@
 @import url(./mainStyles.css);
-
-/* HEADER */
-header {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-36);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar__logo {
-    max-width: 300px;
-}
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-20);
-}
-
-.navbar__link {
-    font-family: var(--alternative-font);
-    font-size: var(--font-medium);
-    padding: var(--spacing-8) var(--spacing-16);
-    transition: background .3s ease-in-out;
-
-    &:hover {
-        background-color: var(--primary-900);
-    }
-}
-
-.navbar__item--li {
-    padding: var(--spacing-8) var(--spacing-16);
-}
-
-.navbar__toggle {
-    display: none;
-}
+@import url(./adminHeader.css);
+@import url(./mainFooter.css);
 
 /* PRODUCT FINDER */
 .finder__content {
@@ -142,87 +103,28 @@ td {
     }
 }
 
-/* FOOTER */
-/* se encuentra dentro de mainStyles.css */
-
 /* RESPONSIVE */
 @media screen and (min-width: 1024px) {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
+    /* TABLE */
     table {
         width: 1126px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    table {
-        max-width: 100vw;
-    }
-
+    /* LIST */
     .listTitle__text{
         padding-right: 3rem;
+    }
+
+    /* TABLE */
+    table {
+        max-width: 100vw;
     }
 }
 
 @media screen and (max-width: 769px) {
-    /* Burger Menu */
-    .navbar__menu {
-        position: absolute;
-        padding: var(--spacing-24);
-        top: 126px;
-        left: 0;
-        background-color: var(--dark-bg-solid);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        width: 50%;
-        transform: translateX(-100%);
-        transition: 0.3s ease all;
-        z-index: 3;
-    }
-
-    .show-menu {
-        transform: translateX(0);
-    }
-
-    .navbar__toggle {
-        display: flex !important;
-        flex-direction: column;
-        margin: 15px;
-    }
-
-    .navbar__toggle span {
-        width: 30px;
-        height: 4px;
-        background-color: white;
-        margin-bottom: 5px;
-        border-radius: 2px;
-        transform-origin: 5px 0px;
-        transition: all 0.2s linear;
-    }
-
-    .navbar__toggle.open span {
-        transform: rotate(45deg) translate(0px, 0px);
-    }
-
-    .navbar__toggle.open span:nth-child(2) {
-        display: none;
-    }
-
-    .navbar__toggle.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(-6px, 2px);
-    }
-
-    .list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* PRODUCT FINDER */
     .finder__content {
         margin-left: var(--spacing-24);
     }
@@ -231,6 +133,13 @@ td {
         width: 300px;
         height: 30px;
         font-size: var(--font-small);
+    }
+
+    /* LIST */
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .listTitle {
@@ -251,20 +160,14 @@ td {
         width: 34px;
     }
 
+    /* TABLE */
     th, td {
         font-size: var(--font-small);
     }
 }
 
 @media screen and (max-width: 426px) {
-    .navbar__menu {
-        top: 90px;
-    }
-
-    header {
-        padding: var(--spacing-20);
-    }
-
+    /* PRODUCT FINDER */
     .finder__content{
         justify-content: center;
         margin: 0;
@@ -278,6 +181,7 @@ td {
         font-size: var(--font-xsmall);
     }
 
+    /* LIST */
     .listTitle {
         padding: 0 2rem;
         gap: 48px;
@@ -298,6 +202,7 @@ td {
         width: 34px;
     }
 
+    /* TABLE */
     table {
         padding: var(--spacing-24) 0;
     }
@@ -313,10 +218,6 @@ td {
 
     td>button {
         width: 25px;
-    }
-
-    .navbar__link {
-        font-size: var(--font-xsmall);
     }
 
     .footer {
@@ -338,17 +239,7 @@ td {
 }
 
 @media screen and (max-width: 321px) {
-    /* NAVBAR */
-    .navbar__menu {
-        top: 85px;
-    }
-
-    .navbar__link,
-    .navbar__item {
-        padding: 0;
-    }
-
-    /* INPUT */
+    /* PRODUCT FINDER */
     .finder {
         margin: 0 var(--spacing-8);
     }
@@ -357,7 +248,7 @@ td {
         font-size: var(--font-xsmall);
     }
 
-    /* LIST TITLE */
+    /* LIST */
     .listTitle__title {
         font-size: var(--font-xsmall);
     }

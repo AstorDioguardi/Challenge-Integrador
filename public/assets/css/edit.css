@@ -1,39 +1,6 @@
 @import url(./mainStyles.css);
-
-
-/*HEADER*/
-
-header{
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-36);
-}
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-menu{
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-20);
-}
-
-.navbar-logo{
-    max-width: 372px;
-    max-height: 65.19px;
-}
-
-.navbar-link{
-    font-size: var(--font-medium);
-    padding: var(--spacing-8) var(--spacing-16);
-    display: inline-block;
-    transition: background .2s ease-in-out;
-}
-
-.navbar-link:hover{
-    background-color: var(--primary-900);
-}
+@import url(./adminHeader.css);
+@import url(./mainFooter.css);
 
 /*FORMULARIO*/
 .form-container{
@@ -103,41 +70,14 @@ input
     border-color: var(--primary-solid);
 }
 
-/*FOOTER*/
-/* se encuentra dentro de mainStyles.css */
-
-.navbar-menu-footer{
-    display: block;
-    align-items: center; 
-    gap: var(--spacing-20);
-}
-
-.navbar-menu-footer, .footer-logo{
-    margin-top: var(--spacing-12);
-}
-
 @media (max-width: 768px) {
     html {
         font-size: 50%; /* Cambia el tamaño de fuente base para dispositivos móviles */
     }
 
-    header {
-        padding: var(--spacing-16); /* Reduce el espacio en el encabezado */
-    }
-
     .form-container {
         font-size: var(--font-xsmall); /* Ajusta el tamaño de fuente para dispositivos móviles */
         padding: var(--spacing-12); /* Reduce el espacio en el formulario */
-    }
-
-    /* Agrega estilos específicos para elementos en dispositivos móviles */
-    .navbar-menu {
-        flex-direction: column; /* Cambia la dirección de los elementos del menú */
-        gap: var(--spacing-12); /* Espacio entre elementos del menú */
-    }
-
-    .navbar-link {
-        padding: var(--spacing-8) var(--spacing-12); /* Ajusta el espaciado de los enlaces del menú */
     }
 
     /* Agrega estilos para textarea en dispositivos móviles */
