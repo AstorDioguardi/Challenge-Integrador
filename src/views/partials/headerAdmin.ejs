@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= view.title %> </title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="shortcut icon" href="../assets/img/branding/isotype.svg">
+</head>
+<body>
+    <header>    <!-- Start Header -->
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="/home">
+                    <img src="../assets/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+                </a>
+            </picture>
+            <ul class="navbar__menu" id="menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/shop">VER TIENDA</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/admin">ADMIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/home">SALIR</a>
+                </li>
+            </ul>
+            <div class="navbar__toggle" id="_toggle"> <!-- Burger Menu for smartphones -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>

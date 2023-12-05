@@ -1,0 +1,48 @@
+<%- include('../partials/headerAdmin') %>
+<link rel="stylesheet" href="../assets/css/register.css">
+<main> <!-- Main start -->
+    <section class="register container">
+        <h3 class="register__title">Crea tu cuenta</h3>
+        <p class="register__text">Completa el formulario para ser parte del mundo de los Funkos</p>
+        <form>
+            <div class="register__form">
+
+                <div class="register__form-group">
+                    <label class="register__form-label" for="nombre">Nombre:</label>
+                    <input class="register__form-input" type="text" name="nombre" id="nombre" placeholder="John"
+                        required>
+                </div>
+                <div class="register__form-group">
+                    <label class="register__form-label" for="apellido">Apellido:</label>
+                    <input class="register__form-input" type="text" name="apellido" id="apellido" placeholder="Doe"
+                        required>
+                </div>
+                <div class="register__form-group">
+                    <label class="register__form-label" for="mail">Email:</label>
+                    <input class="register__form-input" type="email" name="email" id="email"
+                        placeholder="johndoe@correo.com" required>
+                </div>
+                <div class="register__form-group">
+                    <label class="register__form-label" for="">Contraseña:</label>
+                    <input class="register__form-input" type="password" name="contraseña" id="password"
+                        placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+                </div>
+                <div class="register__form-group">
+                    <label class="register__form-label" for="">Repetir Contraseña:</label>
+                    <input class="register__form-input" type="password" name="repetir_password"
+                        id="repetir_password"
+                        placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+                </div>
+                <div class="register__form-submit">
+                    <input class="register__form-button" type="submit" value="Registrar">
+                    <div class="register__form-terminos">
+                        <label for="terminos"><input type="checkbox" id="terminos"
+                                value="terminos" required>  Acepto</label>
+                        <a class="register__form-link" href="">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</main> <!-- Main end -->
+<%- include('../partials/footer') %>

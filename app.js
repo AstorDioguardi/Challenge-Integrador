@@ -9,6 +9,11 @@ const PORT = 8080
 
 app.use(express.static('public'));
 
+/* Configuración EJS */
+
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
