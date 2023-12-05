@@ -85,8 +85,21 @@ img {
     width: 100%;
 }
 
-/*  EL CONTAINER DEBE IR EN LA MEDIA QUERY DE MIN-WIDTH 1024px*/
+footer {
+    background-color: var(--dark-bg-solid);
+    padding-top: var(--spacing-128);
+    padding-bottom: var(--spacing-20);
+}
+
+.footer__copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
+}
+
+
+/*  EL CONTAINER DEBE IR EN LA MEDIA QUERY DE MIN-WIDTH 1024px
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+*/
