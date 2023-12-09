@@ -4,7 +4,7 @@
 <main class="main">
     <section class="container section">
         <h2 class="section__title">INGRESAR A MI CUENTA</h2>
-        <form action="" class="section__form">
+        <form action="./login" class="section__form" method="post">
             <div class="section__form-email">
                 <label class="email__label" for="email">Email:</label>
                 <input class="email__input" id="email" name="email" required placeholder="johndoe@correo.com">
@@ -20,8 +20,8 @@
                     <label class="login-remember" for="recordarme">Recordarme</label>
                 </div>
             </div>
+        </form>
         <a href="" class="section__form-link">Olvidé mi contraseña</a>
-        </form> 
     </section>
 </main>
 <%- include('../partials/footer') %>

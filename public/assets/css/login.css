@@ -96,6 +96,8 @@
 }
 
 .section__form-link {
+    display: flex;
+    justify-content: center;
     color: var(--secondary-solid);
     font-family: var(--base-font);
     font-size: 14px;
