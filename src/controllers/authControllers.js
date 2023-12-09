@@ -1,19 +1,25 @@
 const authControllers = {
-    login: (req, res) => res.render('admin/login',{
+    login: (req, res) => res.render('admin/login', {
         view: {
             title: "Login | Funkoshop"  
         }
     }),
 
-    loginBack: (req, res) => res.send('Route for Login Back View'),
+    loginPost: (req, res) => {
+        console.log(req.body);
+        res.send('Route for Login Post View')
+    } ,
 
-    register: (req, res) => res.render('admin/register',{
+    register: (req, res) => res.render('admin/register', {
         view: {
             title: "Register | Funkoshop"  
         }
     }),
 
-    registerBack: (req, res) => res.send('Route for Register Back View'),
+    registerPost: (req, res) => {
+        console.log(req.body)
+        res.send('Route for Register Post View')
+    },
     
     logout: (req, res) => res.send('Route for Logout View')
 }
