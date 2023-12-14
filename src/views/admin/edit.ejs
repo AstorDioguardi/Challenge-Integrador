@@ -57,10 +57,11 @@
             </div>
           </div><!--fin segundo bloque-->
           <div class="form-item form-bloque bloque-imagenes">
-            <label for="fileInput">Imágenes:</label>
-            <input type="file" id="fileInput" style="display: none" accept="image/*"multiple/>
-            <button id="chooseFileButton">Elegir Archivos</button>
-            <p id="noFilesText">No se ha seleccionado ningún archivo.</p>
+            <label class="label__input" for="image">Imágenes:</label>
+            <input id="image" name="image" type="file" accept="image/*" multiple size="2"/>
+          </div>
+          <div class="img__container">
+            <img class="img__input" id="img-input" alt="Image Preview"/>
           </div>
           <div id="imagePreviews"></div>
           <button class="btn-principal" id="btn-agregar">Modificar Producto</button>

@@ -62,12 +62,25 @@ textarea{
     padding-left: 11.5rem;
 }
 
+.label__input {
+    padding-right: 2rem;
+}
+
 input
 {   
     border-top: 2px;
     border-left: 2px;
     border-right: 2px;
     border-color: var(--primary-solid);
+}
+
+.img__container {
+    padding-bottom: 2rem;
+}
+
+.img__input {
+    display: none;
+    width: 20%;
 }
 
 

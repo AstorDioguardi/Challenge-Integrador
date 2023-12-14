@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static('public'));
 
 /* Configuración EJS */
-
 app.set('view engine', 'ejs');
 app.set('views', resolve() + '/src/views');
 
