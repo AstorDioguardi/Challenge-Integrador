@@ -1,28 +1,40 @@
-const mainControllers = {
-
-    home: (req, res) => res.render('home', {
+const home = (req, res) => {
+    res.render('home', {
         view: {
             title: "Home | Funkoshop"  
         }
-    }),
+    });
+}
 
-    contact: (req, res) => res.render('admin/contact', {
+const contact = (req, res) => {
+    res.render('main/contact', {
         view: {
             title: "Contact | Funkoshop"            
         }
-    }),
+    });
+}
 
-    about: (req, res) => res.render('admin/about', {
+const about = (req, res) => {
+    res.render('main/about', {
         view: {
             title: "About | Funkoshop"            
         }
-    }),
+    });
+}
 
-    faqs: (req, res) => res.render('admin/faqs', {
+const faqs = (req, res) => {
+    res.render('main/faqs', {
         view: {
             title: "FAQs | Funkoshop"            
         }
-    })
+    });
+}
+
+const mainControllers = {
+    home,
+    contact,
+    about,
+    faqs
 }
 
 export default mainControllers;

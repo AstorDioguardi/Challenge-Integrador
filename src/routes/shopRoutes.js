@@ -3,11 +3,12 @@ import shopControllers from '../controllers/shopControllers.js';
 
 const router = express.Router();
 
-router.get('/', shopControllers.shop);
-router.get('/shirts', shopControllers.shirts);
-router.get('/item/:id', shopControllers.item);
-router.post('/item/:id/add', shopControllers.addItemToCart);
-router.get('/cart', shopControllers.cart);
-router.post('/cart', shopControllers.checkout);
+router
+    .get('/', shopControllers.shop)
+    .get('/shirts', shopControllers.shirts)
+    .get('/item/:id', shopControllers.item)
+    .post('/item/:id/add', shopControllers.addItemToCart)
+    .get('/cart', shopControllers.cart)
+    .post('/cart', shopControllers.checkout);
 
 export default router;
