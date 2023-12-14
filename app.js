@@ -16,7 +16,7 @@ app.use(express.static('public'));
 /* Configuración EJS */
 
 app.set('view engine', 'ejs');
-app.set('views', resolve() + './src/views');
+app.set('views', resolve() + '/src/views');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
