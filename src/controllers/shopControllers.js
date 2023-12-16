@@ -9,7 +9,15 @@ const shop = async (req, res) => {
 const shirts = async (req, res) => {
     res.render('shop/shirts', {
         view: {
-            title: "Shirts | Funkoshop"
+            title: "Remeras | Funkoshop"
+        }
+    });
+}
+
+const keys = (req, res) => {
+    res.render('shop/keys', {
+        view: {
+            title: "Llaveros | Funkoshop"
         }
     });
 }
@@ -51,6 +59,7 @@ const checkout = (req, res) => {
 const shopControllers = {
     shop,
     shirts,
+    keys,
     item,
     addItemToCart,
     cart,
