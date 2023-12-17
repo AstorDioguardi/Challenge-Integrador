@@ -26,3 +26,6 @@ const mainControllers = {
 }
 
 export default mainControllers;
+
+console.log(mainControllers.home)
+
