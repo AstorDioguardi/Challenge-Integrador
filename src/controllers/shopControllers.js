@@ -89,11 +89,16 @@ const shopControllers = {
         res.send('Route for add the current item to the shop cart');
     },
 
-    cart: (req, res) => res.render('shop/cart', {
-        view: {
-            title: "Cart | Funkoshop"  
-        },
-    }),
+    cart: (req, res) => {
+        let myVariable = "some value"; // Define tu variable aquí
+        res.render('shop/cart', {
+            view: {
+                title: "Cart | Funkoshop",
+                jsonData: jsonData // Pasa tu variable a la vista
+            },
+        });
+    },
+    
 
     checkout: (req, res) => {
         // Acá poner la acción para la ruta POST '/cart'
@@ -104,3 +109,4 @@ const shopControllers = {
 }
 
 export default shopControllers;
+console.log(jsonData.products[0].id)
