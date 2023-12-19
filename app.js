@@ -6,6 +6,8 @@ import authRoutes from './src/routes/authRoutes.js';
 import dotenv from 'dotenv';
 import { resolve } from 'path';
 import { middlewareError } from './src/middlewares/middlewareError.js';
+import cookieParser from 'cookie-parser';
+import session from 'express-session';
 
 dotenv.config();
 const app = express();
@@ -20,7 +22,18 @@ app.set('views', resolve() + '/src/views');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-app.use('/', mainRoutes);
+app.use(cookieParser());
+app.use(session({
+    secret: 'nico',
+    resave: true,
+    saveUninitialized: true
+}));
+
+app.use('/', (req, res) => { 
+    console.log('holi') 
+    res.send(`hola`)});
+
+// app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
