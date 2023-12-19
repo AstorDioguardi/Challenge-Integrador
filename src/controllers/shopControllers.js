@@ -2,8 +2,8 @@ const shop = async (req, res) => {
     res.render('shop/shop', {
         view: {
             title: "Shop | Funkoshop"
-        }
-    });
+        }},
+        );
 }
 
 const shirts = async (req, res) => {
@@ -41,11 +41,7 @@ const addItemToCart = (req, res) => {
 }
 
 const cart = (req, res) => {
-    res.render('shop/cart', {
-        view: {
-            title: "Cart | Funkoshop"  
-        }
-    })
+    res.render('shop/cart', {view: {title: "Cart | Funkoshop"}})
 }
 
 const checkout = (req, res) => {
