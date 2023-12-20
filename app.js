@@ -29,11 +29,11 @@ app.use(session({
     saveUninitialized: true
 }));
 
-app.use('/', (req, res) => { 
-    console.log('holi') 
-    res.send(`hola`)});
+// app.use('/', (req, res) => { 
+//     console.log('holi') 
+//     res.send(`hola`)});
 
-// app.use('/', mainRoutes);
+app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
