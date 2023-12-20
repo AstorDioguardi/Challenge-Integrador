@@ -62,6 +62,19 @@ textarea{
     padding-left: 11.5rem;
 }
 
+.label__input {
+    padding-right: 2rem;
+}
+
+.img__container {
+    padding-bottom: 2rem;
+}
+
+.img__input {
+    display: none;
+    width: 20%;
+}
+
 input
 {   
     border-top: 2px;

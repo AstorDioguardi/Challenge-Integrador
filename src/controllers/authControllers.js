@@ -1,27 +1,40 @@
-const authControllers = {
-    login: (req, res) => res.render('admin/login', {
+const login = (req, res) => {
+    res.render('auth/login', {
         view: {
             title: "Login | Funkoshop"  
         }
-    }),
+    });
+}
 
-    loginPost: (req, res) => {
-        console.log(req.body);
-        res.send('Route for Login Post View')
-    } ,
+const loginPost = (req, res) => {
+    console.log(req.body);
+    res.send('Route for Login Post View');
+}
 
-    register: (req, res) => res.render('admin/register', {
+const register = (req, res) => {
+    res.render('auth/register', {
         view: {
             title: "Register | Funkoshop"  
         }
-    }),
-
-    registerPost: (req, res) => {
-        console.log(req.body)
-        res.send('Route for Register Post View')
-    },
-    
-    logout: (req, res) => res.send('Route for Logout View')
+    });
 }
+
+const registerPost = (req, res) => {
+    console.log(req.body);
+    res.send('Route for Register Post View');
+}
+
+const logout = (req, res) => {
+    res.send('Route for Logout View');
+}
+
+const authControllers = {
+    login,
+    loginPost,
+    register,
+    registerPost,
+    logout
+}
+
 
 export default authControllers;

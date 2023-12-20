@@ -5,13 +5,13 @@
     <section>
       <div class="container form-container"><!--DIV PRINCIPAL-->
         <h2>CREAR NUEVO ITEM</h2>
-        <form class="form" id="formulario-create" action="" method="post" enctype="multipart/form-data">
+        <form action="/admin/create" class="form" id="formulario-create" method="post" enctype="multipart/form-data">
           <div class="container form-bloque form-item cat-lic-container"><!--CATEGORIA Y LICENCIA-->              
             <div class="form-item form-combobox">
               <label class="form-label" for="categoria-item">Categoría</label>
               <select id="categoria-item">
                 <option hidden selected value="">Selecionar</option>
-                <option value="Figura">Figura</option>
+                <option value="Figura">Funko</option>
               </select>
             </div>
             <div class="form-item form-combobox">
@@ -22,25 +22,25 @@
               </select>
             </div>
           </div><!--FIN CATEGORIA Y LICENCIA-->
-        <div class="form-item form-bloque"><!--inicio primer bloque-->              
-          <div class="form-item ingresar-texto-corto">
-            <label for="nombre-item">Nombre del producto: </label>
-            <input type="text" id="nombre-item" />
-          </div>
-          <textarea id="descripcion-item" placeholder="Descripcion del producto"></textarea>            
+          <div class="form-item form-bloque"><!--inicio primer bloque-->              
             <div class="form-item ingresar-texto-corto">
-              <label for="sku-item">SKU:</label>
-              <input type="text" id="sku-item" />
+              <label for="nombre-item">Nombre del producto: </label>
+              <input type="text" id="nombre-item" />
             </div>
-            <div class="form-item ingresar-texto-corto">
-              <label for="precio-item">Precio:</label>
-              <input type="text" id="precio-item" />
-            </div>
-            <div class="form-item ingresar-texto-corto">
-              <label for="stock-item">Stock:</label>
-              <input type="text" id="stock-item" />
-            </div>
-        </div><!--Fin primer bloque-->            
+            <textarea id="descripcion-item" placeholder="Descripcion del producto"></textarea>            
+              <div class="form-item ingresar-texto-corto">
+                <label for="sku-item">SKU:</label>
+                <input type="text" id="sku-item" />
+              </div>
+              <div class="form-item ingresar-texto-corto">
+                <label for="precio-item">Precio:</label>
+                <input type="text" id="precio-item" />
+              </div>
+              <div class="form-item ingresar-texto-corto">
+                <label for="stock-item">Stock:</label>
+                <input type="text" id="stock-item" />
+              </div>
+          </div><!--Fin primer bloque-->            
           <div class="form-item form-bloque segundo-bloque "><!--inicio segundo bloque-->
             <div class="ingresar-texto-corto">
               <label for="descuento-item">Descuento:</label>
@@ -57,12 +57,12 @@
             </div>
           </div><!--fin segundo bloque-->
           <div class="form-item form-bloque bloque-imagenes">
-            <label for="fileInput">Imágenes:</label>
-            <input type="file" id="fileInput" style="display: none" accept="image/*"multiple/>
-            <button id="chooseFileButton">Elegir Archivos</button>
-            <p id="noFilesText">No se ha seleccionado ningún archivo.</p>
+            <label class="label__input" for="image">Imágenes:</label>
+            <input id="image" name="image" type="file" accept="image/*" multiple size="2"/>
           </div>
-          <div id="imagePreviews"></div>
+          <div class="img__container">
+            <img class="img__input" id="img-input" alt="Image Preview"/>
+          </div>
           <div class="botones">
             <button class="btn-principal" id="btn-agregar">Agregar Producto</button>
             <button class="btn-principal" id="btn-limpiar">Limpiar</button>

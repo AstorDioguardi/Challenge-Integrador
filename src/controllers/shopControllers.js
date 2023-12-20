@@ -1,3 +1,4 @@
+
  // import { promises as fs } from 'fs';
 // import { fileURLToPath } from 'url';
 // import { dirname, join } from 'path';
@@ -50,44 +51,54 @@ const getJsonData = async () => {
 // Asigna el resultado de la función a la variable jsonData
 const jsonData = await getJsonData();
 
-const shopControllers = {
-    
-    shop: async (req, res) => res.render('shop/shop', {
+const shop = async (req, res) => {
+    res.render('shop/shop', {
         view: {
-            title: "Shop | Funkoshop"  
-        }
-    }),
+            title: "Shop | Funkoshop"
+        }},
+        );
+}
 
-    shirts: async (req, res) => res.render('shop/shirts', {
+const shirts = async (req, res) => {
+    res.render('shop/shirts', {
         view: {
-            title: "Shirts | Funkoshop"
+            title: "Remeras | Funkoshop"
         }
-    }),
+    });
+}
 
-    item: (req, res) => res.render('shop/item', {
+const keys = (req, res) => {
+    res.render('shop/keys', {
+        view: {
+            title: "Llaveros | Funkoshop"
+        }
+    });
+}
+
+const item = (req, res) => {
+    res.render('shop/item', {
         view: {
             title: "Item | Funkoshop"  
         },
         data: {
             jsonData
         }
-    }),
+    });
+}
+
+const addItemToCart = (req, res) => {
+    // Acá poner la acción para la ruta POST '/item/:id/add'
     
-    /* {
-        // Acá poner la acción para la ruta GET '/item/:id'
+    // Acá realizar la lógica necesaria para agregar un elemento al carrito de compras
+    res.send('Route for add the current item to the shop cart');
+}
 
-        const itemId = req.params.id;
-        // Acá realizar la lógica necesaria para encontrar y devolver un producto por su ID
+const cart = (req, res) => {
+    res.render('shop/cart', {view: {title: "Cart | Funkoshop"}})
+}
 
-        res.send(`Route for find and retrieve a product from the ID: ${itemId}`);
-    } */
-
-    addItemToCart: (req, res) => {
-        // Acá poner la acción para la ruta POST '/item/:id/add'
-        
-        // Acá realizar la lógica necesaria para agregar un elemento al carrito de compras
-        res.send('Route for add the current item to the shop cart');
-    },
+const checkout = (req, res) => {
+    // Acá poner la acción para la ruta POST '/cart'
 
     cart: (req, res) => {
         let myVariable = "some value"; // Define tu variable aquí
@@ -97,15 +108,19 @@ const shopControllers = {
                 jsonData: jsonData // Pasa tu variable a la vista
             },
         });
-    },
-    
-
-    checkout: (req, res) => {
-        // Acá poner la acción para la ruta POST '/cart'
-
-        // Acá realizar la lógica necesaria para ir a la página de finalización de compra
-        res.send('Route for go to checkout page');
     }
+
+}
+
+
+const shopControllers = {
+    shop,
+    shirts,
+    keys,
+    item,
+    addItemToCart,
+    cart,
+    checkout
 }
 
 export default shopControllers;

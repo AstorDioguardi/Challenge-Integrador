@@ -1,9 +1,9 @@
 async function loadProducts() {
     try {
-        const response = await fetch('./shirtsProducts.json')
+        const response = await fetch('/pages/shirts/shirtsProducts.json')
         const data = await response.json()
 
-        const productsSection = document.getElementById('products-section')
+        const productsSection = document.getElementById('products__shirts-section')
         const productUl = document.createElement('ul')
         productUl.classList.add('galery__items')
 
