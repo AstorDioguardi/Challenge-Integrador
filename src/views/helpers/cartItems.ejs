@@ -1,0 +1,32 @@
+<% itemCart.forEach(item => {%>
+    <section class="card" name="items">
+        <div class="card__img-item">
+            <picture class="card__img">
+                <img class="card__img-img" src="<%= item.img1 %>" alt="<%= item.alt1 %>">
+            </picture>
+            <div class="card__item">
+                <div class="card__item-titles">
+                    <h3 class="card__item-title"><%= item.productName %></h3>
+                    <p class="card__item-brand"><%= item.licence %></p>
+                </div>
+                <div class="card__item-price">
+                    <p class="card__item-price_text" name="price" data-price="<%= item.price %>">precio: $<span id="item-price"><%= item.price %></span></p>
+                </div>
+            </div>                
+        </div>
+        <div class="card__quantity">
+            <!-- <input class="card__quantity-num" id="count-<%= item.id %>" type="number" value="1" readonly> -->
+            <span class="card__quantity-num" name="count" id="count-<%= item.id %>">1</span>
+            <div class="card__quantity-btn">
+                <button onclick="addButton(<%= item.id %>, <%= item.stock %>)" class="card__quantity-add" type="button">+</button>
+                <button onclick="subsButton(<%= item.id %>)" class="card__quantity-dlt" type="button">-</button>
+            </div>
+        </div>
+        <div class="card__price">
+            <p class="card__price-num">$ <span id="total-element"></span></p>
+        </div>
+        <div class="card__delete">
+            <button class="card__delete-button"><img src="../assets/img/icons/delete-icon-cart.svg" class="card__delete-img" alt="Icono del boton eliminar producto del carrito"></button>
+        </div>
+    </section>
+<% }) %>

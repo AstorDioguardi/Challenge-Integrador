@@ -1,17 +1,11 @@
 const admin = (req, res) => {
-    res.render('admin/admin', {
-        view: {
-            title: "Admin | Funkoshop"  
-        }
-    });
+    const title = "Admin | Funkoshop";
+    res.render('admin/admin', {title});
 }
 
 const create = (req, res) => {
-    res.render('admin/create', {
-        view: {
-            title: "Create | Funkoshop"  
-        }
-    });
+    const title = "Create | Funkoshop";
+    res.render('admin/create', {title});
 }
 
 const createItem = (req, res) => {
@@ -19,11 +13,8 @@ const createItem = (req, res) => {
 }
 
 const edit = (req, res) => {
-    res.render('admin/edit', {
-        view: {
-            title: "Edit | Funkoshop"  
-        }
-    });
+    const title = "Edit | Funkoshop";
+    res.render('admin/edit', {title});
 }
 
 const editItem = (req, res) => {

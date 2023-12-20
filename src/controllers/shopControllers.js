@@ -1,36 +1,21 @@
 const shop = async (req, res) => {
-    res.render('shop/shop', {
-        view: {
-            title: "Shop | Funkoshop"
-        }},
-        );
+    const title = "Shop | Funkoshop";
+    res.render('shop/shop', {title});
 }
 
 const shirts = async (req, res) => {
-    res.render('shop/shirts', {
-        view: {
-            title: "Remeras | Funkoshop"
-        }
-    });
+    const title = "Remeras | Funkoshop";
+    res.render('shop/shirts', {title});
 }
 
 const keys = (req, res) => {
-    res.render('shop/keys', {
-        view: {
-            title: "Llaveros | Funkoshop"
-        }
-    });
+    const title = "Llaveros | Funkoshop";
+    res.render('shop/keys', {title});
 }
 
 const item = (req, res) => {
-    res.render('shop/item', {
-        view: {
-            title: "Item | Funkoshop"  
-        },
-        data: {
-            
-        }
-    });
+    const title = "Item | Funkoshop";
+    res.render('shop/item', {title});
 }
 
 const addItemToCart = (req, res) => {
@@ -40,8 +25,37 @@ const addItemToCart = (req, res) => {
     res.send('Route for add the current item to the shop cart');
 }
 
+const itemCart = [
+    
+    {
+        id: 1,
+        img1: "/assets/img/pokemon/pidgeotto-1.webp",
+        img2: "../../assets/img/pokemon/pidgeotto-box.webp",
+        alt1: "Figura coleccionable Funko de Pidgeotto de la serie Pokemon",
+        alt2: "Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon",
+        licence: "POKEMON",
+        productName: "PIDGEOTTO",
+        price: "1799,99",
+        promo: "3 CUOTAS SIN INTERÉS",
+        stock: 5
+    },
+    {
+        id: 2,
+        img1: "/assets/img/harry-potter/luna-1.webp",
+        img2: "../../assets/img/harry-potter/luna-box.webp",
+        alt1: "Figura coleccionable Funko de Luna de la película Harry Potter",
+        alt2: "Figura coleccionable Funko de Luna en caja de la película Harry Potter",
+        licence: "HARRY POTTER",
+        productName: "LUNA LOVEGOOD LION MASK",
+        price: "3799,99",
+        promo: "3 CUOTAS SIN INTERÉS",
+        stock: 3
+    }
+]
+
 const cart = (req, res) => {
-    res.render('shop/cart', {view: {title: "Cart | Funkoshop"}})
+    const title = "Cart | Funkoshop";
+    res.render('shop/cart', {title, itemCart});
 }
 
 const checkout = (req, res) => {

@@ -1,9 +1,6 @@
 const login = (req, res) => {
-    res.render('auth/login', {
-        view: {
-            title: "Login | Funkoshop"  
-        }
-    });
+    const title = "Login | Funkoshop";
+    res.render('auth/login', {title});
 }
 
 const loginPost = (req, res) => {
@@ -12,11 +9,8 @@ const loginPost = (req, res) => {
 }
 
 const register = (req, res) => {
-    res.render('auth/register', {
-        view: {
-            title: "Register | Funkoshop"  
-        }
-    });
+    const title = "Register | Funkoshop";
+    res.render('auth/register', {title});
 }
 
 const registerPost = (req, res) => {
@@ -35,6 +29,5 @@ const authControllers = {
     registerPost,
     logout
 }
-
 
 export default authControllers;

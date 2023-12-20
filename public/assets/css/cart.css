@@ -135,14 +135,18 @@ input[type=number] {
 }
 
 .card__quantity-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 89.479px;
     height: 40px;
-    text-align: center;
     font-family: var(--base-font);
     font-size: 2em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    background: #FFF;
+    border: 0.5px solid var(--dark-500);
 }
 
 .card__quantity-btn {

@@ -1,33 +1,21 @@
 const home = (req, res) => {
-    res.render('home', {
-        view: {
-            title: "Home | Funkoshop"  
-        }
-    });
+    const title = "Home | Funkoshop";
+    res.render('home', {title});
 }
 
 const contact = (req, res) => {
-    res.render('main/contact', {
-        view: {
-            title: "Contact | Funkoshop"            
-        }
-    });
+    const title = "Contact | Funkoshop" ;
+    res.render('main/contact', {title});
 }
 
 const about = (req, res) => {
-    res.render('main/about', {
-        view: {
-            title: "About | Funkoshop"            
-        }
-    });
+    const title = "About | Funkoshop";
+    res.render('main/about', {title});
 }
 
 const faqs = (req, res) => {
-    res.render('main/faqs', {
-        view: {
-            title: "FAQs | Funkoshop"            
-        }
-    });
+    const title = "FAQs | Funkoshop";
+    res.render('main/faqs', {title});
 }
 
 const mainControllers = {
