@@ -1,24 +1,24 @@
-<ul class="galery__items">
+
     <% products.forEach(item => {%>
-    <li class="galery__item">
-    <article class="card-item">
-        <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-                <span class="card-item__tag">NUEVO</span>
-                <img class="card-item__img--front" src="../../assets/img/<%= item.img1 %>" alt="<%= item.alt1 %>">
-                <img class="card-item__img--back" src="../../assets/img/<%= item.img2 %>" alt="<%= item.alt2 %>">
-            </picture>
-        </a>
-            <div class="card-item__content">
+        <li class="galery__item">
+            <article class="card-item">
                 <a class="card-item__link" href="">
-                    <p class="card-item__licence"><%= item.licence %></p>
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">NUEVO</span>
+                        <img class="card-item__img--front" src="../../assets/img/<%= item.img1 %>" alt="<%= item.alt1 %>">
+                        <img class="card-item__img--back" src="../../assets/img/<%= item.img2 %>" alt="<%= item.alt2 %>">
+                    </picture>
                 </a>
-                <a class="card-item__link" href="">
-                    <p class="card-item__name"><%= item.productName %></p>
-                </a>
-                <p class="card-item__price">$ <%= item.price %></p>
-                <p class="card-item__promo"><%= item.promo %></p>
-            </div>
-    </article></li>
-    <% }) %>
-</ul>
+                <div class="card-item__content">
+                    <a class="card-item__link" href="">
+                        <p class="card-item__licence"><%= item.licence %></p>
+                    </a>
+                    <a class="card-item__link" href="">
+                        <p class="card-item__name"><%= item.productName %></p>
+                    </a>
+                    <p class="card-item__price">$ <%= item.price %></p>
+                    <p class="card-item__promo"><%= item.promo %></p>
+                </div>
+            </article>
+        </li>
+    <% }) %>

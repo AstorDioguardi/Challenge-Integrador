@@ -55,9 +55,11 @@
                 </ul>
             </form>
         </aside>
+        
         <section class="galery container" id="products-section">   <!-- galery content-->
-            <!-- Aca se insertaran las etiquetas de los productos con shop-products.js y shopProducts.json -->
-            <%- include('../helpers/products') %>
+            <ul class="galery__items">
+                <%- include('../helpers/products', products) %>
+            </ul>
         </section>
         
         <nav aria-label="Page navigation example" class="pageNavigation"> <!-- NAV PAGES -->

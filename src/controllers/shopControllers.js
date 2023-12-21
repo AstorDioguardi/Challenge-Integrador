@@ -10,9 +10,7 @@ export class ShopControllers {
     }
 
     getProducts = async (_, res) => {
-        console.log('getProducts');
         const products = await this.services.getProducts();
-        console.log(products);
         res.render('shop/shop', { title, products })
     }
 
