@@ -1,28 +1,16 @@
 import express from 'express';
 import {ShopControllers} from '../controllers/shopControllers.js';
+// import router from './mainRoutes.js';
 
-/*const router = express.Router();
+const router = express.Router();
+const controller = new ShopControllers();
 router
-    .get('/', shopControllers.shop)
-    .get('/shirts', shopControllers.shirts)
-    .get('/keys', shopControllers.keys)
-    .get('/item/:id', shopControllers.item)
-    .post('/item/:id/add', shopControllers.addItemToCart)
-    .get('/cart', shopControllers.cart)
-    .post('/cart', shopControllers.checkout);
+    .get('/', controller.shop)
+    .get('/shirts', controller.shirts)
+    .get('/keys', controller.keys)
+    .get('/item/:id', controller.item)
+    .post('/item/:id/add', controller.addItemToCart)
+    .get('/cart', controller.cart)
+    .post('/cart', controller.checkout);
 
-export default router;*/
-
-export class ShopRoutes extends express.Router {
-
-    constructor() {
-        super();
-        this.controller = new ShopControllers();
-        this
-            .get('/', this.controller.getProducts)
-            .get('/name/:name', this.controller.getProductByName)
-            .get('/delete/:id', this.controller.delProduct)
-            .get('/:id', this.controller.getProductById)
-    }
-
-}
+export default router;

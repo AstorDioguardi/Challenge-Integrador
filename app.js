@@ -1,6 +1,6 @@
 import express from 'express';
 import mainRoutes from './src/routes/mainRoutes.js';
-import { ShopRoutes } from './src/routes/shopRoutes.js';
+import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
 import dotenv from 'dotenv';
@@ -12,7 +12,6 @@ import session from 'express-session';
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
-const shopRoutes = new ShopRoutes();
 
 app.use(express.static('public'));
 
@@ -29,10 +28,6 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-
-// app.use('/', (req, res) => { 
-//     console.log('holi') 
-//     res.send(`hola`)});
 
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
