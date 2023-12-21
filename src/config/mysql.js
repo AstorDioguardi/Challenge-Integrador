@@ -14,7 +14,7 @@ export default class MySQL {
         })
 
         this.sequelize.authenticate()
-            .then(() => console.log('conectado con exito'))
+            .then(() => console.log('Base de Datos conectado con exito :D'))
             .catch((e) => console.log('problema en la conexión:', e))
     }
 }

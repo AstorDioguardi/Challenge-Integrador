@@ -5,7 +5,14 @@ const login = (req, res) => {
 
 const loginPost = (req, res) => {
     console.log(req.body);
-    res.send('Route for Login Post View');
+
+    if (req.body.email === 'admin@admin.com' && req.body.password === 'admin'){
+        req.session.nombre = 'admin';
+        res.redirect('/admin');
+    } else {
+        res.redirect('/home');
+    }
+    
 }
 
 const register = (req, res) => {
