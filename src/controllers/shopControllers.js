@@ -28,6 +28,7 @@ const getJsonData = async () => {
 // Asigna el resultado de la función a la variable jsonData
 const itemCart = await getJsonData();
 
+
 const shop = async (req, res) => {
     const title = "Shop | Funkoshop";
     res.render('shop/shop', {title});
@@ -46,7 +47,9 @@ const keys = (req, res) => {
 const item = (req, res) => {
     const title = "Item | Funkoshop";
     res.render('shop/item', {title});
+
 }
+
 
 const addItemToCart = (req, res) => {
     // Acá poner la acción para la ruta POST '/item/:id/add'

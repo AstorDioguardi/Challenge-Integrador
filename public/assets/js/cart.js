@@ -72,6 +72,20 @@ const subsButton = (id) => {
     refresh();
 }
 
+// function deleteItem(id) {
+//     const countElement = document.getElementById(`count-${id}`);
+//     const itemElement = document.querySelector(`[name="items"][data-id="${id}"]`);
+
+//     // Establecer la cantidad del producto a 0
+//     countElement.innerText = '0';
+
+//     // Ocultar el elemento de la tarjeta
+//     itemSection.style.display = 'none';
+
+//     refresh();
+// }
+
+
 refresh();
 document.addEventListener('DOMContentLoaded', () => {
     refresh();

@@ -92,9 +92,10 @@
             "alt2": "Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon",
             "licence": "POKEMON",
             "productName": "PIDGEOTTO",
-            "price": 1799.99,
+            "price": 3999.99,
             "promo": "3 CUOTAS SIN INTERÉS",
-            "stock": "5"
+            "stock": "5",
+            "SpecialEdition": true
         },
         {
             "id": 8,
@@ -104,9 +105,12 @@
             "alt2": "Figura coleccionable Funko de Luna en caja de la película Harry Potter",
             "licence": "HARRY POTTER",
             "productName": "LUNA LOVEGOOD LION MASK",
-            "price": 1999.99,
+            "price": 999.99,
             "promo": "3 CUOTAS SIN INTERÉS",
-            "stock": "5"
+            "stock": "5",
+            "ofert": true
         }
     ]
+    ,
+    "cartItems": []
 }
