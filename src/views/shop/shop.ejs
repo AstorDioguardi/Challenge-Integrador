@@ -57,6 +57,7 @@
         </aside>
         <section class="galery container" id="products-section">   <!-- galery content-->
             <!-- Aca se insertaran las etiquetas de los productos con shop-products.js y shopProducts.json -->
+            <%- include('../helpers/products') %>
         </section>
         
         <nav aria-label="Page navigation example" class="pageNavigation"> <!-- NAV PAGES -->
@@ -97,7 +98,7 @@
     </div>
 </main>
 <%- include('../partials/footer') %>
-<script src="/pages/shop/shop-products.js"></script>
+<!-- <script src="/pages/shop/shop-products.js"></script> -->
 <script src="/assets/js/toggleFilter.js"></script>
 <script src="/assets/js/pagination.js"></script>
 </body>

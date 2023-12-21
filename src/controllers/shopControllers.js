@@ -1,5 +1,63 @@
+import { ShopServices } from "../services/shopServices.js"
+
+
+const title = 'Productos'
+
+export class ShopControllers {
+
+    constructor() {
+        this.services = new ShopServices();
+    }
+
+    getProducts = async (_, res) => {
+        console.log('getProducts');
+        const products = await this.services.getProducts();
+        console.log(products);
+        res.render('shop/shop', { title, products })
+    }
+
+
+    getProductById = async (req, res) => {
+        const product = await this.services.getProductById(req.params.id)
+        res.send(product === null ? 'No se encontró el id' : product)
+    }
+
+
+    getProductByName = async (req, res) => {
+        const product = await this.services.getProductByName(req.params.name);
+        res.send(product)
+    }
+
+
+    delProduct = async (req, res) => {
+        const result = await this.services.delProduct(req.params.id);
+        res.send(`resultado: ${result}`);
+    }
+
+}
+
+
+
+/*import Producto from "../models/schemas/products.js";
+
 const shop = async (req, res) => {
     const title = "Shop | Funkoshop";
+    try {
+        const products = await Producto.findAll();
+        res.send(` <html>
+        <body>
+          <h1>Listado de Productos</h1>
+          <ul>
+            ${productos.map(producto => `<li>${producto.nombre}</li>`).join('')}
+          </ul>
+        </body>
+      </html> `)
+    }
+
+    catch (error) { 
+        console.error('Error al obtener productos:', error);
+        res.status(500).send('Error interno del servidor');
+    }
     res.render('shop/shop', {title});
 }
 
@@ -76,4 +134,4 @@ const shopControllers = {
     checkout
 }
 
-export default shopControllers;
+export default shopControllers;*/

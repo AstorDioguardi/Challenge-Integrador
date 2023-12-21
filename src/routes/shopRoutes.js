@@ -1,8 +1,7 @@
 import express from 'express';
-import shopControllers from '../controllers/shopControllers.js';
+import {ShopControllers} from '../controllers/shopControllers.js';
 
-const router = express.Router();
-
+/*const router = express.Router();
 router
     .get('/', shopControllers.shop)
     .get('/shirts', shopControllers.shirts)
@@ -12,4 +11,18 @@ router
     .get('/cart', shopControllers.cart)
     .post('/cart', shopControllers.checkout);
 
-export default router;
+export default router;*/
+
+export class ShopRoutes extends express.Router {
+
+    constructor() {
+        super();
+        this.controller = new ShopControllers();
+        this
+            .get('/', this.controller.getProducts)
+            .get('/name/:name', this.controller.getProductByName)
+            .get('/delete/:id', this.controller.delProduct)
+            .get('/:id', this.controller.getProductById)
+    }
+
+}

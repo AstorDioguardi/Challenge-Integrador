@@ -27,6 +27,11 @@ Puedes clonar este repositorio usando el siguiente comando en git bash:
 
 ## Uso
 
+Para instalar las dependencias utilizadas en el proyecto se debe colocar:
+
+**npm i**
+
+
 Para inicializar el servidor desde la terminal se debe colocar:
 
 **npm run dev**
