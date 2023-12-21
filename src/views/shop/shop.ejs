@@ -23,13 +23,22 @@
                     <option value="mas relevantes">Mas relevante</option>
                 </select>
                 <label for="min">Precio</label>
-                <div>
-                    <label for="min">Min</label>
-                    <input type="number" id="min" name="min" placeholder=" 0">
-                    <span>-</span>
-                    <label for="max">Max</label>
-                    <input type="number" id="max" name="max" placeholder=" 0">
-                </div>
+                <form action="" method="" class="aside__form" id="filterForm">
+                    <!-- ... (otros campos) ... -->
+                
+                    <label for="precio">Precio</label>
+                    <div>
+                        <label for="min">Min</label>
+                        <input type="number" id="min" name="min" placeholder="0">
+                        <span>-</span>
+                        <label for="max">Max</label>
+                        <input type="number" id="max" name="max" placeholder="0">
+                    </div>
+                
+                    <!-- ... (otros campos) ... -->
+                
+                    <button type="button" id="filterButton">Filtrar</button>
+                </form>
                 <h3>Filtrar</h3>
                 <ul>
                     <li>

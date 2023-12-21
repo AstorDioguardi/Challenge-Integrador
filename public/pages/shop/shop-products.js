@@ -21,10 +21,24 @@ async function loadProducts() {
             }
         });
 
-        // Filtrar productos según los checkboxes seleccionados
-        const filterProducts = () => {
-            // ... (código de filtrado)
-        };
+// Filtrar productos según los checkboxes seleccionados
+const filterProducts = () => {
+    const nuevosCheckbox = document.getElementById('nuevos');
+    const edicionEspecialCheckbox = document.getElementById('edicionEspecial');
+    const ofertasCheckbox = document.getElementById('ofertas');
+    const favoritosCheckbox = document.getElementById('favoritos');
+
+    const filteredProducts = data.products.filter(product => {
+        return (
+            (!nuevosCheckbox.checked || product.tag === 'NUEVO') &&
+            (!edicionEspecialCheckbox.checked || product.tag === 'EDICIÓN ESPECIAL') &&
+            (!ofertasCheckbox.checked || product.ofert) &&
+            (!favoritosCheckbox.checked || product.tag === 'FAVORITOS')
+        );
+    });
+
+    renderProducts(filteredProducts);
+};
 
         // Escuchar eventos de cambio en los checkboxes
         document.getElementById('nuevos').addEventListener('change', filterProducts);
@@ -36,13 +50,13 @@ async function loadProducts() {
         const renderProducts = (products) => {
             // Limpiar la sección de productos antes de renderizar
             productUl.innerHTML = '';
-        
+
             products.forEach(product => {
                 const productLi = document.createElement('li');
                 productLi.classList.add('galery__item');
                 productLi.innerHTML = `
                     <article class="card-item">
-                        <a class="card-item__link" href="shop/item/${product.id}">
+                        <a class="card-item__link" href="">
                             <picture class="card-item__cover">
                                 <span class="card-item__tag">${product.tag}</span>
                                 <img class="card-item__img--front" src=${product.img1} alt=${product.alt1}>
@@ -50,10 +64,10 @@ async function loadProducts() {
                             </picture>
                         </a>
                         <div class="card-item__content">
-                            <a class="card-item__link" href="shop/item/${product.id}">
+                            <a class="card-item__link" href="">
                                 <p class="card-item__licence">${product.licence}</p>
                             </a>
-                            <a class="card-item__link" href="shop/item/${product.id}">
+                            <a class="card-item__link" href="">
                                 <p class="card-item__name">${product.productName}</p>
                             </a>
                             <p class="card-item__price">${product.price}</p>
@@ -62,13 +76,12 @@ async function loadProducts() {
                     </article>`;
                 productUl.appendChild(productLi);
             });
-        
+
             productsSection.appendChild(productUl);
         };
-        
+
         // Renderizar todos los productos al cargar la página
         renderProducts(data.products);
-        
         const pidgeottoSpecialEdition = document.getElementById('product-7'); // Asigna el id correcto según tu HTML
         if (pidgeottoSpecialEdition) {
             pidgeottoSpecialEdition.style.filter = 'grayscale(100%)';
@@ -76,6 +89,9 @@ async function loadProducts() {
     } catch (err) {
         console.log("Error al cargar los productos", err);
     }
+
+
+
 }
 
 window.addEventListener('load', loadProducts);
