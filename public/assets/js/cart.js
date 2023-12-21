@@ -1,8 +1,15 @@
-const totalTag = document.getElementById('total-elemet');
+const totalItemsTag = document.getElementById('total-items');
+
+const totalTag = document.getElementById('total');
+let cantItems = 0;
+
+const finalFinalTag = document.getElementById('finalFinal');
+
 
 const refresh = () => {
     let total = 0;
     const individualTotals = [];
+    
 
     const items = document.getElementsByName('items');
 
@@ -23,6 +30,28 @@ const refresh = () => {
     totalElements.forEach((element, index) => {
         element.innerText = individualTotals[index].toFixed(2).replace('.', ',');
     });
+
+      // Calcular la cantidad total de elementos en el carrito
+    let totalItems = 0;
+    items.forEach(item => {
+        const countElement = item.querySelector('.card__quantity-num');
+        const count = parseInt(countElement.innerText);
+        totalItems += count;
+    });
+
+    totalItemsTag.innerText = totalItems;
+
+    for (let i = 0; i < individualTotals.length; i++) {
+        total += individualTotals[i];
+    }
+    totalTag.innerText = total.toFixed(2).replace('.', ',');
+    
+    const shippingCost = 0;
+    const totalWithShipping = total + shippingCost;
+
+    finalFinalTag.innerText = totalWithShipping.toFixed(2).replace('.', ',');
+
+
 }
 
 const addButton = (id, stock) => {
@@ -44,3 +73,6 @@ const subsButton = (id) => {
 }
 
 refresh();
+document.addEventListener('DOMContentLoaded', () => {
+    refresh();
+});

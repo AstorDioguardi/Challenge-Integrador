@@ -1,3 +1,33 @@
+
+import { promises as fs } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Función para cargar el JSON y devolverlo como objeto
+const loadJsonData = async () => {
+    try {
+        const data = await fs.readFile(join(__dirname, '../../public/pages/shop/shopProducts.json'), 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error(`Error loading JSON data: ${error.message}`);
+        throw error;
+    }
+};
+
+// Función que retorna la lectura del JSON como objeto
+const getJsonData = async () => {
+    return await loadJsonData().catch(err => {
+        console.error(err);
+        return {}; // Puedes retornar un objeto vacío o manejar el error según tus necesidades
+    });
+};
+
+// Asigna el resultado de la función a la variable jsonData
+const itemCart = await getJsonData();
+
 const shop = async (req, res) => {
     const title = "Shop | Funkoshop";
     res.render('shop/shop', {title});
@@ -25,33 +55,6 @@ const addItemToCart = (req, res) => {
     res.send('Route for add the current item to the shop cart');
 }
 
-const itemCart = [
-    
-    {
-        id: 1,
-        img1: "/assets/img/pokemon/pidgeotto-1.webp",
-        img2: "../../assets/img/pokemon/pidgeotto-box.webp",
-        alt1: "Figura coleccionable Funko de Pidgeotto de la serie Pokemon",
-        alt2: "Figura coleccionable Funko de Pidgeotto en caja de la serie Pokemon",
-        licence: "POKEMON",
-        productName: "PIDGEOTTO",
-        price: "1799,99",
-        promo: "3 CUOTAS SIN INTERÉS",
-        stock: 5
-    },
-    {
-        id: 2,
-        img1: "/assets/img/harry-potter/luna-1.webp",
-        img2: "../../assets/img/harry-potter/luna-box.webp",
-        alt1: "Figura coleccionable Funko de Luna de la película Harry Potter",
-        alt2: "Figura coleccionable Funko de Luna en caja de la película Harry Potter",
-        licence: "HARRY POTTER",
-        productName: "LUNA LOVEGOOD LION MASK",
-        price: "3799,99",
-        promo: "3 CUOTAS SIN INTERÉS",
-        stock: 3
-    }
-]
 
 const cart = (req, res) => {
     const title = "Cart | Funkoshop";
@@ -77,3 +80,4 @@ const shopControllers = {
 }
 
 export default shopControllers;
+console.log(itemCart)
