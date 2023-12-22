@@ -16,7 +16,8 @@ export class ProductsSchema {
             licence: { type: STRING },
             productName: { type: STRING },
             price: { type: INTEGER },
-            promo: { type: STRING }
+            promo: { type: STRING },
+            stock: { type: INTEGER}
         };
 
         this.connection = this.createConnection();

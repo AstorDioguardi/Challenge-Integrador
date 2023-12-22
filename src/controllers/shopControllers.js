@@ -3,7 +3,7 @@ import { ShopServices } from "../services/shopServices.js"
 const title = 'Productos'
 
 //itemCart es un mini json para iterar en el carrito
-const itemCart = [       
+/*const itemCart = [       
     {
         id: 1,
         img1: "/assets/img/pokemon/pidgeotto-1.webp",
@@ -28,7 +28,7 @@ const itemCart = [
         promo: "3 CUOTAS SIN INTERÉS",
         stock: 3
     }
-]
+]*/
 
 export class ShopControllers {
 
@@ -36,10 +36,9 @@ export class ShopControllers {
         this.services = new ShopServices();
     }
 
-    shop = async (_, res) => {
-
+    shop = async (req, res) => {
+        const title = "Funkos | Funkoshop";
         const products = await this.services.getProducts();
-
         res.render('shop/shop', { title, products })
     }
 
@@ -62,9 +61,10 @@ export class ShopControllers {
         res.send('Route for add the current item to the shop cart');
     }
     
-    cart = (req, res) => {
+    cart = async (req, res) => {
         const title = "Cart | Funkoshop";
-        res.render('shop/cart', {title, itemCart});
+        const products = await this.services.getProducts();
+        res.render('shop/cart', {title, products});
     }
     
     checkout = (req, res) => {
