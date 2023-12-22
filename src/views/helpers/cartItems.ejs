@@ -1,8 +1,8 @@
-<% itemCart.forEach(item => {%>
-    <section class="card" name="items">
+<% products.forEach(item => {%>
+    <section class="card" name="items" id="product-<%= item.id %>">
         <div class="card__img-item">
             <picture class="card__img">
-                <img class="card__img-img" src="<%= item.img1 %>" alt="<%= item.alt1 %>">
+                <img class="card__img-img" src="../../assets/img/<%= item.img1 %>" alt="<%= item.alt1 %>">
             </picture>
             <div class="card__item">
                 <div class="card__item-titles">
@@ -23,10 +23,10 @@
             </div>
         </div>
         <div class="card__price">
-            <p class="card__price-num">$ <span id="total-element"></span></p>
+            <p class="card__price-num">$ <span id="total-element-<%= item.id %>"></span></p>
         </div>
         <div class="card__delete">
-            <button class="card__delete-button"><img src="../assets/img/icons/delete-icon-cart.svg" class="card__delete-img" alt="Icono del boton eliminar producto del carrito"></button>
+            <button class="card__delete-button" onclick="deleteProduct(<%= item.id %>)"><img src="../assets/img/icons/delete-icon-cart.svg" class="card__delete-img" alt="Icono del boton eliminar producto del carrito"></button>
         </div>
     </section>
 <% }) %>
